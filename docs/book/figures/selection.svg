@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="282" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 282" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="282"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-282)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="268" style="font-family: SansB; font-size: 12px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,536) scale(1,-1)">Uncertainty and batch diversity answer different questions</text>
+			<text x="0" y="251" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,502) scale(1,-1)">Original schematic: circles are unlabeled candidates in a feature space</text>
+			<text x="46.93896484375" y="232" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,464) scale(1,-1)">Only highest uncertainty</text>
+			<rect x="0" y="57" width="234" height="153" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<circle cx="52" cy="142" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="68" cy="153" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="43" cy="164" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="77" cy="173" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="165" cy="172" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="180" cy="186" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="177" cy="160" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="121" cy="89" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="107" cy="102" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="139" cy="104" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="33" cy="86" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="51" cy="97" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="313.81396484375" y="232" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,464) scale(1,-1)">Uncertainty plus diversity</text>
+			<rect x="270" y="57" width="234" height="153" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<circle cx="322" cy="142" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="338" cy="153" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="313" cy="164" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="347" cy="173" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="435" cy="172" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="450" cy="186" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="447" cy="160" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="391" cy="89" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="377" cy="102" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="409" cy="104" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<circle cx="303" cy="86" r="6" style="stroke: rgb(72%,41%,16%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(72%,41%,16%); fill-rule: evenodd;"/>
+			<circle cx="321" cy="97" r="6" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="0" y="28" style="font-family: SansB; font-size: 9px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,56) scale(1,-1)">Same four-label budget; the selected batch covers different regions.</text>
+			<text x="0" y="10" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,20) scale(1,-1)">Diversity is relative to the features. Neither strategy guarantees useful labels.</text>
+		</g>
+	</g>
+</svg>

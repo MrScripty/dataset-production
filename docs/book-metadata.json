@@ -1,0 +1,97 @@
+{
+  "title": "Dataset Production",
+  "edition": "2026-10-02",
+  "chapters": 16,
+  "pdf_pages": 80,
+  "source_sha256": "81d59106d3e3eea9b438125f51e39bc0b1c27cac916b8bf980fd9f372b0718fa",
+  "headings": [
+    {
+      "id": "dataset-production",
+      "title": "Dataset Production"
+    },
+    {
+      "id": "define-and-measure-the-training-claim",
+      "title": "1 Define and measure the training claim"
+    },
+    {
+      "id": "annotation-as-a-measurement-process",
+      "title": "2 Annotation as a measurement process"
+    },
+    {
+      "id": "audit-labels-and-estimate-uncertainty",
+      "title": "3 Audit labels and estimate uncertainty"
+    },
+    {
+      "id": "sources-permissions-and-lineage",
+      "title": "4 Sources permissions and lineage"
+    },
+    {
+      "id": "independence-duplicates-and-contamination",
+      "title": "5 Independence duplicates and contamination"
+    },
+    {
+      "id": "select-the-next-useful-examples",
+      "title": "6 Select the next useful examples"
+    },
+    {
+      "id": "mixtures-curricula-and-data-value",
+      "title": "7 Mixtures curricula and data value"
+    },
+    {
+      "id": "generate-verify-and-refine-synthetic-data",
+      "title": "8 Generate verify and refine synthetic data"
+    },
+    {
+      "id": "vision-capture-simulation-and-temporal-annotation",
+      "title": "9 Vision capture simulation and temporal annotation"
+    },
+    {
+      "id": "audio-segmentation-alignment-and-diversity",
+      "title": "10 Audio segmentation alignment and diversity"
+    },
+    {
+      "id": "text-retrieval-preferences-and-tool-environments",
+      "title": "11 Text retrieval preferences and tool environments"
+    },
+    {
+      "id": "debug-data-and-test-causal-explanations",
+      "title": "12 Debug data and test causal explanations"
+    },
+    {
+      "id": "reconstruct-published-production-systems",
+      "title": "13 Reconstruct published production systems"
+    },
+    {
+      "id": "economics-scale-and-maintenance",
+      "title": "14 Economics scale and maintenance"
+    },
+    {
+      "id": "freeze-releases-and-test-the-emitted-data",
+      "title": "15 Freeze releases and test the emitted data"
+    },
+    {
+      "id": "apply-the-methods-to-tuldok",
+      "title": "16 Apply the methods to Tuldok"
+    },
+    {
+      "id": "appendix-a-exact-training-companion-contracts",
+      "title": "Appendix A Exact training companion contracts"
+    },
+    {
+      "id": "appendix-b-production-tools-and-edition-boundaries",
+      "title": "Appendix B Production tools and edition boundaries"
+    },
+    {
+      "id": "appendix-c-example-schemas-and-export-relationships",
+      "title": "Appendix C Example schemas and export relationships"
+    },
+    {
+      "id": "appendix-d-worksheets-and-release-review",
+      "title": "Appendix D Worksheets and release review"
+    },
+    {
+      "id": "references-and-evidence-notes",
+      "title": "References and evidence notes"
+    }
+  ]
+}

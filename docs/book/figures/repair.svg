@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="313" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 313" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="313"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-313)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="299" style="font-family: SansB; font-size: 12px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,598) scale(1,-1)">A four-arm experiment can test a proposed repair</text>
+			<text x="0" y="282" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,564) scale(1,-1)">Original design; use a fixed evaluation and declared training budgets</text>
+			<rect x="0" y="175" width="239" height="79" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="11" y="234" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,468) scale(1,-1)">A Baseline</text>
+			<text x="11" y="217.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,434) scale(1,-1)">Frozen current data and training recipe</text>
+			<rect x="265" y="175" width="239" height="79" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="276" y="234" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,468) scale(1,-1)">B Random deletion</text>
+			<text x="276" y="217.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,434) scale(1,-1)">Remove the same number of eligible records as</text>
+			<text x="276" y="204.85" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,409) scale(1,-1)">targeted deletion</text>
+			<rect x="0" y="68" width="239" height="79" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(98%,94%,87%); fill-rule: evenodd;"/>
+			<text x="11" y="127" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,254) scale(1,-1)">C Targeted deletion</text>
+			<text x="11" y="110.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,220) scale(1,-1)">Remove records nominated by the suspected</text>
+			<text x="11" y="97.85" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,195) scale(1,-1)">error mechanism</text>
+			<rect x="265" y="68" width="239" height="79" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="276" y="127" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,254) scale(1,-1)">D Targeted correction</text>
+			<text x="276" y="110.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,220) scale(1,-1)">Repair the nominated records when a valid</text>
+			<text x="276" y="97.85" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,195) scale(1,-1)">target is available</text>
+			<path d="M 119,175 L 119,147 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="119 147, 121.3971 151.3879, 116.6029 151.3879" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<path d="M 384,175 L 384,147 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="384 147, 386.3971 151.3879, 381.6029 151.3879" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<text x="0" y="38" style="font-family: SansB; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,76) scale(1,-1)">Compare seeds, independent evaluation uncertainty and critical slices.</text>
+			<text x="0" y="17" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,34) scale(1,-1)">Removal changes size and exposure; correction may change reviewer effort.</text>
+		</g>
+	</g>
+</svg>
