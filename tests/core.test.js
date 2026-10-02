@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {inflateSync} from 'node:zlib';
-import {pointToUnit,maskBox,presetMask,families,fixtureRows,splitWarnings,repairSplits,defaultState,validState,checkCandidate,decideCandidate,addCrop,releaseChecks,snapshot,grayscalePng,crc32} from '../docs/core.js';
+import {numericInput,pointToUnit,maskBox,presetMask,families,fixtureRows,splitWarnings,repairSplits,defaultState,validState,checkCandidate,decideCandidate,addCrop,releaseChecks,snapshot,grayscalePng,crc32} from '../docs/core.js';
 test('point centers use dimension minus one; final pixel reaches one',()=>assert.deepEqual(pointToUnit(19,11),[1,1]));
 test('one final pixel has nonzero half-open box',()=>assert.deepEqual(maskBox(presetMask('last')).normalized,[19/20,11/12,1,1]));
 test('empty mask has no localization target',()=>assert.equal(maskBox(presetMask('empty')).xyxy,null));
@@ -14,3 +14,5 @@ test('freeze refuses blockers and copies immutable selections',()=>{const s=defa
 test('stored state shape validates and corrupted state is rejected',()=>{assert.equal(validState(defaultState()),true);assert.equal(validState({version:1}),false);});
 test('PNG is 8-bit grayscale, contains only original 0/255 samples and has valid CRCs',async()=>{const mask=presetMask();const png=await grayscalePng(mask);assert.deepEqual([...png.slice(0,8)],[137,80,78,71,13,10,26,10]);let p=8,data;while(p<png.length){const v=new DataView(png.buffer,p);const n=v.getUint32(0);const type=new TextDecoder().decode(png.slice(p+4,p+8));assert.equal(v.getUint32(n+8),crc32(png.slice(p+4,p+n+8)));if(type==='IHDR'){assert.equal(png[p+16],8);assert.equal(png[p+17],0);}if(type==='IDAT')data=inflateSync(png.slice(p+8,p+n+8));p+=n+12;}const unpack=[];for(let y=0;y<12;y++){assert.equal(data[y*21],0);unpack.push(...data.slice(y*21+1,y*21+21));}assert.deepEqual(unpack,mask);});
 test('unsubmitted caption drafts block release rather than disappearing',()=>{const s=defaultState();s.drafts={c01:'Edited but not saved'};assert.equal(releaseChecks(s).find(c=>c.id==='drafts').ok,false);});
+
+test('blank numeric controls are invalid instead of silently becoming zero',()=>{assert.equal(Number.isNaN(numericInput('')),true);assert.equal(Number.isNaN(numericInput('  ')),true);assert.equal(numericInput('0'),0);});

@@ -1,6 +1,7 @@
 // Pure, dependency-free teaching models. No backend or model calls.
 export const WIDTH=20, HEIGHT=12;
 export const clone = value => structuredClone(value);
+export const numericInput = value => String(value).trim() === '' ? NaN : Number(value);
 export function pointToUnit(x,y,w=WIDTH,h=HEIGHT){
   if(w<2||h<2) throw new Error('Point-center normalization needs dimensions >= 2');
   return [x/(w-1),y/(h-1)];
