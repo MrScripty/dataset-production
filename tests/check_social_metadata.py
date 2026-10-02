@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://mrscripty.github.io/dataset-production/'
-IMAGE=BASE+'assets/book-cover.webp'
+IMAGE=BASE+'assets/dataset-production-social-1280x640.jpg'
 class Head(HTMLParser):
     def __init__(self):super().__init__();self.meta={};self.canonical=[];self.in_head=False
     def handle_starttag(self,tag,attrs):
@@ -18,8 +18,9 @@ class Head(HTMLParser):
         if tag=='link' and attrs.get('rel')=='canonical':self.canonical.append(attrs['href'])
     def handle_endtag(self,tag):
         if tag=='head':self.in_head=False
-width,height=Image.open(ROOT/'docs/assets/book-cover.webp').size
-assert (width,height)==(500,646)
+width,height=Image.open(ROOT/'docs/assets/dataset-production-social-1280x640.jpg').size
+assert (width,height)==(1280,640)
+assert (ROOT/'docs/assets/dataset-production-social-1280x640.jpg').stat().st_size<1_000_000
 for path,canonical in [('index.html',''),('book/index.html','book/'),('about.html','about.html')]:
     p=Head();p.feed((ROOT/'docs'/path).read_text())
     assert p.canonical==[BASE+canonical]
@@ -28,7 +29,7 @@ for path,canonical in [('index.html',''),('book/index.html','book/'),('about.htm
     for k in ['og:image','og:image:secure_url','twitter:image']:assert p.meta[k]==[IMAGE]
     assert p.meta['og:url']==[BASE+canonical]
     assert p.meta['og:image:width']==[str(width)] and p.meta['og:image:height']==[str(height)]
-    assert p.meta['og:image:type']==['image/webp']
+    assert p.meta['og:image:type']==['image/jpeg']
     assert p.meta['og:title']==p.meta['twitter:title'] and p.meta['og:description']==p.meta['twitter:description']
     assert p.meta['og:image:alt']==p.meta['twitter:image:alt']
     assert p.meta['twitter:card']==['summary_large_image']

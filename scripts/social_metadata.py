@@ -4,15 +4,15 @@ from html import escape
 from pathlib import Path
 import re
 BASE='https://mrscripty.github.io/dataset-production/'
-IMAGE=BASE+'assets/book-cover.webp'
+IMAGE=BASE+'assets/dataset-production-social-1280x640.jpg'
 TITLE='Dataset Production by Puma'
 DESCRIPTION='An 80-page fieldbook on building reliable training data, with interactive examples and proposed Tuldok workspaces.'
-ALT='Dataset Production book cover by Puma, showing photographs, sound waveforms, and botanical annotation in a warm study.'
+ALT='The full Dataset Production book cover by Puma, centered on a dark plum landscape background, with its title and author visible.'
 START='<!-- book-sharing-metadata:start -->'
 END='<!-- book-sharing-metadata:end -->'
 def metadata(relative_path=''):
     url=BASE+relative_path
-    tags=[('og:type','website'),('og:site_name','Dataset Production'),('og:title',TITLE),('og:description',DESCRIPTION),('og:url',url),('og:image',IMAGE),('og:image:secure_url',IMAGE),('og:image:type','image/webp'),('og:image:width','500'),('og:image:height','646'),('og:image:alt',ALT)]
+    tags=[('og:type','website'),('og:site_name','Dataset Production'),('og:title',TITLE),('og:description',DESCRIPTION),('og:url',url),('og:image',IMAGE),('og:image:secure_url',IMAGE),('og:image:type','image/jpeg'),('og:image:width','1280'),('og:image:height','640'),('og:image:alt',ALT)]
     output=[START,f'<link rel="canonical" href="{escape(url,quote=True)}">']
     output += [f'<meta property="{key}" content="{escape(value,quote=True)}">' for key,value in tags]
     twitter=[('twitter:card','summary_large_image'),('twitter:title',TITLE),('twitter:description',DESCRIPTION),('twitter:image',IMAGE),('twitter:image:alt',ALT)]
