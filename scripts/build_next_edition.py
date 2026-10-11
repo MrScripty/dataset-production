@@ -56,6 +56,29 @@ class CitationLinker(HTMLParser):
         self.parts.append('<!' + decl + '>')
 
 
+class PreformattedScroller(CitationLinker):
+    """Keep preformatted text intact while making overflow keyboard reachable."""
+    def handle_starttag(self, tag, attrs):
+        super().handle_starttag(tag, attrs)
+        if tag == 'pre':
+            existing = dict(attrs)
+            additions = {'tabindex': '0', 'role': 'region',
+                         'aria-label': 'Code or text diagram; scroll horizontally when needed'}
+            extra = ''.join(f' {key}="{value}"' for key, value in additions.items()
+                            if key not in existing)
+            self.parts[-1] = self.parts[-1][:-1] + extra + '>'
+
+    def handle_data(self, data):
+        self.parts.append(data)
+
+
+def make_pre_scrollable(rendered):
+    parser = PreformattedScroller(set())
+    parser.feed(rendered)
+    parser.close()
+    return ''.join(parser.parts)
+
+
 class ReferenceAnchorer(CitationLinker):
     """Recognize entry paragraphs only inside the actual reference section."""
     VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input',
@@ -234,7 +257,7 @@ def main():
     manuscript, metadata = assemble()
     rendered = subprocess.run(['pandoc', '-f', 'markdown', '-t', 'html5', '--wrap=none'],
                               input=manuscript, text=True, capture_output=True, check=True).stdout
-    rendered = link_citations(rendered)
+    rendered = make_pre_scrollable(link_citations(rendered))
     output.mkdir(parents=True, exist_ok=True)
     figures = output / 'figures'
     figures.mkdir()
@@ -245,7 +268,7 @@ def main():
         shutil.copyfile(source, figures / name)
     (output / 'manuscript.md').write_text(manuscript)
     (output / 'metadata.json').write_text(json.dumps(metadata, indent=2) + '\n')
-    style = 'body{max-width:76ch;margin:3rem auto;padding:0 1.5rem;font:18px/1.65 system-ui;color:#202020;overflow-wrap:anywhere}h1{margin-top:3rem;line-height:1.2}h2{line-height:1.3}img{max-width:100%;height:auto}table{display:block;overflow-x:auto;border-collapse:collapse;font-size:.85em}th,td{border:1px solid #ddd;padding:.5em;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f4f4;padding:1rem}a{color:#1257a4;overflow-wrap:anywhere}code{overflow-wrap:anywhere}'
+    style = 'body{max-width:76ch;margin:3rem auto;padding:0 1.5rem;font:18px/1.65 system-ui;color:#202020;overflow-wrap:anywhere}h1{margin-top:3rem;line-height:1.2}h2{line-height:1.3}img{max-width:100%;height:auto}table{display:block;overflow-x:auto;border-collapse:collapse;font-size:.85em}th,td{border:1px solid #ddd;padding:.5em;text-align:left}pre{max-width:100%;box-sizing:border-box;overflow-x:auto;white-space:pre;overflow-wrap:normal;word-break:normal;background:#f4f4f4;padding:1rem}pre:focus-visible{outline:2px solid #1257a4;outline-offset:2px}a{color:#1257a4;overflow-wrap:anywhere}code{overflow-wrap:anywhere}pre code{white-space:inherit;overflow-wrap:normal;word-break:normal}'
     page = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dataset Production next edition review</title><style>' + style + '</style></head><body>' + rendered + '</body></html>\n'
     (output / 'index.html').write_text(page)
     print(json.dumps(metadata, indent=2))

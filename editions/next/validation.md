@@ -50,6 +50,12 @@ The subsequent full suite passes **42 Python tests**: the unchanged 22 release-l
 
 These added checks validate the consistency of the teaching examples. They do not turn the invented pseudo-label scores, fraction judgments, temperature rule or monitoring incident into trained-model, verifier-library, scientific-simulation or deployed-service results. The executable first-release fixture and its data are unchanged. The revised pages still need visual review at their new commit; prior browser findings should not be treated as a fresh layout pass on new prose.
 
+## Preformatted diagram correction
+
+Cloud-browser QA of exact commit `53620a4507fdebd73e4ec815c94c2d6b28d01f34` found that wrapping preformatted blocks broke the physical-field array rows and the augmentation diagram heading on a phone. Navigation, citation destinations, chapter order and overall page width passed that review. The renderer now preserves preformatted whitespace and contains horizontal scrolling within each block. Blocks are keyboard-focusable, labelled for assistive technology and have a visible focus outline; ordinary prose and long links still wrap.
+
+The full suite passes **44 Python tests** and **15 JavaScript tests**, plus draft assembly and `git diff --check`. The two new renderer regressions check the displayed array/image rows, whitespace and contained-scroll CSS, keyboard-accessible markup, preservation of existing attributes and idempotence. These structural checks do not substitute for the focused browser recheck, which remains pending for this correction. Chapter text and the executable lab are unchanged.
+
 ## Checks not completed
 
 The original local browser visual-QA attempt was made on the cloud workspace. Playwright's bundled Chromium was absent; the installed Chromium could not launch because the environment forbids a required process socket, including the permitted escalation attempt. HTML generation and structural checks passed. The later separate browser review is recorded above; a full corrected mobile-layout pass is still pending. A visual review is required before calling the new reader audience-ready.

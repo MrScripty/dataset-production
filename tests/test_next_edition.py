@@ -85,6 +85,48 @@ class NextEditionTests(unittest.TestCase):
             self.assertEqual(subprocess.run(command, capture_output=True).returncode, 2)
         self.assertEqual(hashlib.sha256((ROOT / 'docs/book/manuscript.md').read_bytes()).hexdigest(), source_hash)
 
+    def test_preformatted_scroller_preserves_text_attributes_and_keyboard_access(self):
+        source = ('<p>Inline <code>keep wrapping</code>.</p>'
+                  '<pre class="text"><code>Input     Target\n20  22    21  23\n'
+                  '18  21    19  22\n&amp; [R01]\n</code></pre>'
+                  '<pre tabindex="0" role="region" aria-label="Existing label">x</pre>')
+        output = module.make_pre_scrollable(source)
+        self.assertEqual(''.join(HTMLAudit(source).text), ''.join(HTMLAudit(output).text))
+        self.assertIn('Input     Target\n20  22    21  23\n18  21    19  22\n', output)
+        self.assertIn('<pre class="text" tabindex="0" role="region"', output)
+        self.assertIn('aria-label="Code or text diagram; scroll horizontally when needed"', output)
+        self.assertIn('<pre tabindex="0" role="region" aria-label="Existing label">x</pre>', output)
+        self.assertIn('&amp; [R01]', output)
+        self.assertEqual(module.make_pre_scrollable(output), output)
+
+    def test_reader_preserves_diagram_rows_with_contained_scrolling(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / 'review'
+            subprocess.run([sys.executable, str(ROOT / 'scripts/build_next_edition.py'),
+                            '--out', str(output)], check=True, capture_output=True)
+            page = (output / 'index.html').read_text()
+        style = re.search(r'<style>(.*?)</style>', page, re.S)[1]
+        pre = re.search(r'(?:^|})pre\{([^}]+)}', style)[1]
+        properties = dict(item.split(':', 1) for item in pre.split(';'))
+        for name, value in {'white-space': 'pre', 'overflow-wrap': 'normal',
+                            'word-break': 'normal', 'overflow-x': 'auto',
+                            'max-width': '100%', 'box-sizing': 'border-box'}.items():
+            self.assertEqual(properties[name], value)
+        self.assertIn('pre code{white-space:inherit;overflow-wrap:normal;word-break:normal}', style)
+        self.assertIn('pre:focus-visible{outline:', style)
+        self.assertRegex(style, r'body\{[^}]*overflow-wrap:anywhere')
+        self.assertIn('a{color:#1257a4;overflow-wrap:anywhere}', style)
+        diagrams = [match[1] for match in re.finditer(r'<pre[^>]*><code[^>]*>(.*?)</code></pre>', page, re.S)]
+        self.assertIn('Input at 0 seconds      Target at 1 second\n'
+                      '20  22                  21  23\n18  21                  19  22', diagrams)
+        self.assertIn('Original            Moved one column right\n'
+                      '.....               .....\n.##..               ..##.\n'
+                      '.##..               ..##.\n.....               .....\n'
+                      '.....               .....', diagrams)
+        for tag in re.findall(r'<pre(?:\s[^>]*)?>', page):
+            self.assertIn('tabindex="0"', tag)
+            self.assertIn('aria-label=', tag)
+
     def test_citation_groups_ranges_and_unknowns_preserve_text(self):
         source = ('<p>[R01] [T02, B04] [T02-T06] [R01, R999] [R404]</p>'
                   '<h1 id="references-and-evidence-notes">References</h1>'
