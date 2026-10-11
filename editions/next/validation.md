@@ -2,7 +2,7 @@
 
 Checked 11 October 2026 against the initial next-edition draft. Author credit remains Puma. The delivered manuscript and all published `docs/` artifacts are unchanged by this increment.
 
-## Executed checks
+## Initial executed checks at commit 416408d
 
 Environment: Python 3.12.14, Unicode database 15.0.0, Node.js 24.19.0 and Pandoc 3.1.11.1. No packages, model checkpoints or external dataset payloads were installed/downloaded for these checks.
 
@@ -34,9 +34,17 @@ Reference-label SHA-256: `203a8bb1ed213d2a61520717adc04fdfab654dc5b6eabd3a4de633
 
 An independent review identified a real normalization defect in the first implementation: case folding could leave a non-idempotent Unicode form. Recipe version 2 applies NFKC, casefold, a second NFKC and whitespace collapse. Regression tests cover the collision and its effect on family splitting. Existing ASCII-fixture results remain unchanged.
 
+## Reader QA follow-up
+
+A subsequent cloud-browser review of exact commit `416408db8adaa7eeb1edbd5b80637c64bd7fd062` identified three reader defects: an unbroken revision link widened a 390-pixel viewport, contents entries were plain text, and citation markers lacked reference links. Desktop layout, images and code wrapping were reported sound. That review separately ran a 22-test subset; it is not a replacement for the original 28-Python/15-JavaScript result above. Forty-six external links succeeded, while 96 were blocked by the browsing proxy and remain unverified. The blocked links were not retried.
+
+The narrow follow-up adds wrapping for long text/links, manifest-owned stable chapter anchors, linked contents with return navigation, and bibliography-derived citation destinations. Citation groups and ranges preserve the exact visible marker text; unknown labels remain unlinked. Existing links, code, attributes and reference-entry text are not relinked. Duplicate destination labels/IDs fail rather than silently point somewhere ambiguous.
+
+The updated full checks pass: **35 Python tests** (22 release-lab plus 13 assembly/navigation tests), **15 JavaScript tests**, draft assembly and `git diff --check`. New regressions verify long-link wrapping CSS, stable anchors after chapter reordering, all in-page destinations, group/range and unknown-reference handling, visible citation-text preservation, protected markup and duplicate-anchor rejection. These are structural and behavioral checks. The three changes await the requested browser recheck at their newly published commit; no new visual-pass claim is made here.
+
 ## Checks not completed
 
-Browser visual QA was attempted on the cloud workspace. Playwright's bundled Chromium was absent; the installed Chromium could not launch because the environment forbids a required process socket, including the permitted escalation attempt. HTML generation and structural checks passed, but no screenshot-based or mobile-layout pass is claimed. A visual review is required before calling the new reader audience-ready.
+The original local browser visual-QA attempt was made on the cloud workspace. Playwright's bundled Chromium was absent; the installed Chromium could not launch because the environment forbids a required process socket, including the permitted escalation attempt. HTML generation and structural checks passed. The later separate browser review is recorded above; a full corrected mobile-layout pass is still pending. A visual review is required before calling the new reader audience-ready.
 
 No final PDF/export package has been produced. The existing published reader/PDF was not regenerated or deployed. No new GPU/CPU model-training comparison, neural memory measurement, external-dataset download, Math-Verify execution, companion trainer-loader integration, robot/sensor capture, Rheon run or physical validation was performed. Those tasks remain explicit research/implementation gates. Retained illustrative calculations and earlier `not_run` experiments keep their original status.
 

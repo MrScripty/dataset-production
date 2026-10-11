@@ -1,5 +1,6 @@
 """Check the review assembly without modifying the published edition."""
 import hashlib
+from html.parser import HTMLParser
 import importlib.util
 import json
 from pathlib import Path
@@ -8,11 +9,29 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('next_edition', ROOT / 'scripts/build_next_edition.py')
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
+
+
+class HTMLAudit(HTMLParser):
+    def __init__(self, source):
+        super().__init__(convert_charrefs=True)
+        self.ids, self.links, self.text = [], [], []
+        self.feed(source)
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if 'id' in attrs:
+            self.ids.append(attrs['id'])
+        if tag == 'a':
+            self.links.append(attrs)
+
+    def handle_data(self, data):
+        self.text.append(data)
 
 
 class NextEditionTests(unittest.TestCase):
@@ -59,9 +78,106 @@ class NextEditionTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             metadata = json.loads((output / 'metadata.json').read_text())
             self.assertEqual(metadata['retained_source_sha256'], source_hash)
-            self.assertIn('<html lang="en">', (output / 'index.html').read_text())
+            page = (output / 'index.html').read_text()
+            self.assertIn('<html lang="en">', page)
+            self.assertIn('a{color:#1257a4;overflow-wrap:anywhere}', page)
+            self.assertRegex(page, r'body\{[^}]*overflow-wrap:anywhere')
             self.assertEqual(subprocess.run(command, capture_output=True).returncode, 2)
         self.assertEqual(hashlib.sha256((ROOT / 'docs/book/manuscript.md').read_bytes()).hexdigest(), source_hash)
+
+    def test_citation_groups_ranges_and_unknowns_preserve_text(self):
+        source = ('<p>[R01] [T02, B04] [T02-T06] [R01, R999] [R404]</p>'
+                  '<h1 id="references-and-evidence-notes">References</h1>'
+                  '<p><strong>[R01] Real title.</strong> Evidence &amp; limits.</p>'
+                  '<p><strong>[T02] Two.</strong></p><p><strong>[T06] Six.</strong></p>'
+                  '<p><strong>[B04] Four.</strong></p>')
+        linked = module.link_citations(source)
+        audit = HTMLAudit(linked)
+        self.assertEqual(''.join(audit.text), ''.join(HTMLAudit(source).text))
+        self.assertEqual(set(audit.ids), {'references-and-evidence-notes', 'reference-r01', 'reference-t02', 'reference-t06', 'reference-b04'})
+        self.assertEqual(len(audit.links), 6)
+        self.assertNotIn('href="#reference-r999"', linked)
+        self.assertNotIn('href="#reference-r404"', linked)
+        self.assertIn('[R404]', linked)
+        self.assertEqual(module.link_citations(linked), linked)
+
+    def test_citation_linker_does_not_mutate_code_attributes_or_existing_links(self):
+        protected = ('<a href="https://example.org/[R01]">[R01]</a>'
+                     '<code>[R01]</code><pre><code>[R01]</code></pre>'
+                     '<span data-example="[R01]">plain</span><!-- [R01] -->')
+        source = protected + '<p>[R01]</p><h1 id="references-and-evidence-notes">References</h1><p><strong>[R01] Title.</strong></p>'
+        linked = module.link_citations(source)
+        self.assertIn(protected, linked)
+        self.assertEqual(linked.count('class="citation"'), 1)
+        self.assertEqual(''.join(HTMLAudit(linked).text), ''.join(HTMLAudit(source).text))
+
+    def test_reference_discovery_ignores_script_code_and_unrelated_bold_prose(self):
+        source = ('<script>const x="<p><strong>[R99]</strong></p>";</script>'
+                  '<p><strong>[R01] Prose.</strong><strong>[R98] Prose.</strong> [R99] [R98] [R01]</p>'
+                  '<h1 id="references-and-evidence-notes">References</h1>'
+                  '<pre><code><strong>[R97]</strong></code></pre>'
+                  '<p><strong><code>[R94]</code></strong></p>'
+                  '<p><strong>&amp;[R93]</strong></p>'
+                  '<p><strong>&#38;[R92]</strong></p>'
+                  '<p>&amp;<strong>[R91]</strong></p>'
+                  '<p>Not an entry: <strong>[R96]</strong></p>'
+                  '<p><strong>[R01] Real entry.</strong></p>'
+                  '<h1 id="next-edition-research-register">Next section</h1>'
+                  '<p><strong>[R95] Not an entry.</strong> [R95]</p>')
+        linked = module.link_citations(source)
+        self.assertEqual(''.join(HTMLAudit(source).text), ''.join(HTMLAudit(linked).text))
+        self.assertEqual(linked.count('class="citation"'), 1)
+        self.assertIn('id="reference-r01"', linked)
+        for label in ('r91', 'r92', 'r93', 'r94', 'r95', 'r96', 'r97', 'r98', 'r99'):
+            self.assertNotIn('reference-' + label, linked)
+        self.assertIn('<script>const x="<p><strong>[R99]</strong></p>";</script>', linked)
+
+    def test_duplicate_reference_destinations_fail(self):
+        with self.assertRaisesRegex(ValueError, 'duplicate bibliography label'):
+            module.link_citations('<h1 id="references-and-evidence-notes">Refs</h1><p><strong>[R01] First</strong></p><p><strong>[R01] Second</strong></p>')
+
+    def test_chapter_anchors_survive_reordering(self):
+        _, original = module.assemble()
+        config = json.loads(module.MANIFEST.read_text())
+        config['chapters'] = list(reversed(config['chapters']))
+        with tempfile.TemporaryDirectory() as temporary:
+            manifest = Path(temporary) / 'manifest.json'
+            manifest.write_text(json.dumps(config))
+            with patch.object(module, 'MANIFEST', manifest):
+                manuscript, reordered = module.assemble()
+        self.assertEqual(reordered['chapter_anchors'], list(reversed(original['chapter_anchors'])))
+        self.assertIn('[21 Build your first release from supplied data](#chapter-first-release)', manuscript)
+        self.assertIn('# 21 Build your first release from supplied data {#chapter-first-release}', manuscript)
+
+    def test_duplicate_chapter_ids_fail(self):
+        config = json.loads(module.MANIFEST.read_text())
+        config['chapters'][1]['id'] = config['chapters'][0]['id']
+        with tempfile.TemporaryDirectory() as temporary:
+            manifest = Path(temporary) / 'manifest.json'
+            manifest.write_text(json.dumps(config))
+            with patch.object(module, 'MANIFEST', manifest):
+                with self.assertRaisesRegex(ValueError, 'unique stable'):
+                    module.assemble()
+
+    def test_reader_navigation_and_reference_links_have_unique_destinations(self):
+        manuscript, metadata = module.assemble()
+        source = subprocess.run(['pandoc', '-f', 'markdown', '-t', 'html5', '--wrap=none'],
+                                input=manuscript, text=True, capture_output=True, check=True).stdout
+        linked = module.link_citations(source)
+        audit = HTMLAudit(linked)
+        self.assertEqual(len(audit.ids), len(set(audit.ids)))
+        links = [link['href'][1:] for link in audit.links if link.get('href', '').startswith('#')]
+        self.assertEqual(set(links) - set(audit.ids), set())
+        for anchor in metadata['chapter_anchors']:
+            self.assertIn(anchor, links)
+        for anchor in ('reader-paths', 'contents', 'appendix-a', 'appendix-b', 'appendix-c',
+                       'appendix-d', 'references-and-evidence-notes', 'next-edition-research-register'):
+            self.assertIn(anchor, links)
+        entries = set(re.findall(r'\*\*\[([RTB]\d+)\]', manuscript))
+        reference_ids = {identity for identity in audit.ids if identity.startswith('reference-')}
+        self.assertEqual(reference_ids, {'reference-' + entry.lower() for entry in entries})
+        self.assertGreater(len([link for link in audit.links if link.get('class') == 'citation']), 80)
+        self.assertEqual(''.join(audit.text), ''.join(HTMLAudit(source).text))
 
     def test_refuses_published_output(self):
         for target in (ROOT, ROOT / 'docs', ROOT / 'docs/book/unpublished-preview'):

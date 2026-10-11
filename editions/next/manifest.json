@@ -11,21 +11,24 @@
           "path": "editions/next/chapters/first-release.md"
         }
       ],
-      "title": "Build your first release from supplied data"
+      "title": "Build your first release from supplied data",
+      "id": "first-release"
     },
     {
       "segments": [
         {
           "existing_chapter": 1
         }
-      ]
+      ],
+      "id": "training-claim"
     },
     {
       "segments": [
         {
           "existing_chapter": 4
         }
-      ]
+      ],
+      "id": "sources-lineage"
     },
     {
       "title": "Extract normalize and protect independent examples",
@@ -37,21 +40,24 @@
         {
           "existing_chapter": 5
         }
-      ]
+      ],
+      "id": "extraction-independence"
     },
     {
       "segments": [
         {
           "existing_chapter": 2
         }
-      ]
+      ],
+      "id": "annotation"
     },
     {
       "segments": [
         {
           "existing_chapter": 3
         }
-      ]
+      ],
+      "id": "label-audits"
     },
     {
       "segments": [
@@ -59,7 +65,8 @@
           "path": "editions/next/chapters/weak-semisupervised.md"
         }
       ],
-      "title": "Write rules and learn from unlabeled examples"
+      "title": "Write rules and learn from unlabeled examples",
+      "id": "weak-semisupervised"
     },
     {
       "segments": [
@@ -67,35 +74,40 @@
           "path": "editions/next/chapters/augmentation.md"
         }
       ],
-      "title": "Choose transformations that preserve the target"
+      "title": "Choose transformations that preserve the target",
+      "id": "augmentation"
     },
     {
       "segments": [
         {
           "existing_chapter": 6
         }
-      ]
+      ],
+      "id": "example-selection"
     },
     {
       "segments": [
         {
           "existing_chapter": 7
         }
-      ]
+      ],
+      "id": "mixtures"
     },
     {
       "segments": [
         {
           "existing_chapter": 8
         }
-      ]
+      ],
+      "id": "synthetic-data"
     },
     {
       "segments": [
         {
           "existing_chapter": 11
         }
-      ]
+      ],
+      "id": "text-retrieval-tools"
     },
     {
       "segments": [
@@ -103,21 +115,24 @@
           "path": "editions/next/chapters/reasoning-trajectories.md"
         }
       ],
-      "title": "Produce reasoning tasks and trustworthy trajectories"
+      "title": "Produce reasoning tasks and trustworthy trajectories",
+      "id": "reasoning-trajectories"
     },
     {
       "segments": [
         {
           "existing_chapter": 9
         }
-      ]
+      ],
+      "id": "vision"
     },
     {
       "segments": [
         {
           "existing_chapter": 10
         }
-      ]
+      ],
+      "id": "audio"
     },
     {
       "segments": [
@@ -125,28 +140,32 @@
           "path": "editions/next/chapters/physical-systems.md"
         }
       ],
-      "title": "Represent physical systems and qualify simulation data"
+      "title": "Represent physical systems and qualify simulation data",
+      "id": "physical-systems"
     },
     {
       "segments": [
         {
           "existing_chapter": 12
         }
-      ]
+      ],
+      "id": "data-debugging"
     },
     {
       "segments": [
         {
           "existing_chapter": 13
         }
-      ]
+      ],
+      "id": "published-systems"
     },
     {
       "segments": [
         {
           "existing_chapter": 14
         }
-      ]
+      ],
+      "id": "economics"
     },
     {
       "title": "Release monitor and recover a production dataset",
@@ -158,14 +177,16 @@
           "path": "editions/next/chapters/monitoring.md",
           "title": "Monitor repair and roll back a production release"
         }
-      ]
+      ],
+      "id": "release-monitoring"
     },
     {
       "segments": [
         {
           "existing_chapter": 16
         }
-      ]
+      ],
+      "id": "tuldok"
     }
   ],
   "review_source_url": "https://github.com/MrScripty/dataset-production/blob/edition/beginner-practical-2026-10"
