@@ -1,0 +1,172 @@
+{
+  "author": "Puma",
+  "status": "initial next-edition draft",
+  "date": "2026-10-11",
+  "base_commit": "93613d638d6c6bb05c997b55033234a6147b63c3",
+  "retained_source": "docs/book/manuscript.md",
+  "chapters": [
+    {
+      "segments": [
+        {
+          "path": "editions/next/chapters/first-release.md"
+        }
+      ],
+      "title": "Build your first release from supplied data"
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 1
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 4
+        }
+      ]
+    },
+    {
+      "title": "Extract normalize and protect independent examples",
+      "segments": [
+        {
+          "path": "editions/next/chapters/extraction-audits.md",
+          "title": "Extract normalize and audit what changed"
+        },
+        {
+          "existing_chapter": 5
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 2
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 3
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "path": "editions/next/chapters/weak-semisupervised.md"
+        }
+      ],
+      "title": "Write rules and learn from unlabeled examples"
+    },
+    {
+      "segments": [
+        {
+          "path": "editions/next/chapters/augmentation.md"
+        }
+      ],
+      "title": "Choose transformations that preserve the target"
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 6
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 7
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 8
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 11
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "path": "editions/next/chapters/reasoning-trajectories.md"
+        }
+      ],
+      "title": "Produce reasoning tasks and trustworthy trajectories"
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 9
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 10
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "path": "editions/next/chapters/physical-systems.md"
+        }
+      ],
+      "title": "Represent physical systems and qualify simulation data"
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 12
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 13
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 14
+        }
+      ]
+    },
+    {
+      "title": "Release monitor and recover a production dataset",
+      "segments": [
+        {
+          "existing_chapter": 15
+        },
+        {
+          "path": "editions/next/chapters/monitoring.md",
+          "title": "Monitor repair and roll back a production release"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "existing_chapter": 16
+        }
+      ]
+    }
+  ],
+  "review_source_url": "https://github.com/MrScripty/dataset-production/blob/edition/beginner-practical-2026-10"
+}
