@@ -1,47 +1,102 @@
 # Extract normalize and audit what changed
 
-The first release lab starts with JSONL to make each decision visible. Larger pipelines encounter HTML, PDFs, tables, archives and multimedia containers. The central obligation is the same: be able to explain which source became which example, what was lost, and how often that loss changes the target.
+The first lesson turned two differently written invoice messages into one example. That was safe only because we decided that case and spacing did not change the routing task. Now we will follow the same question further: when a source contains useful information mixed with clutter, how do we clean it without changing what it says?
 
-## Keep the source and the comparison key distinct
+There are three distinct operations. **Extraction** selects the content we intend to use. **Normalization** puts selected content into a consistent form. **Deduplication** finds repeated examples. A mistake at any stage can survive every later step, so “the file loaded successfully” is not a sufficient check.
 
-A web page is not a ready-made training example. Extraction decides whether navigation, comments, tables, captions, footnotes, or code survive. Trafilatura’s 2021 evaluation measured retained content versus boilerplate on 500 documents; the paper also cautions that page styles and HTML diversity affect extraction. That result is evidence for a tool/version and benchmark, not a permanent ranking. [Trafilatura, ACL demo 2021](https://aclanthology.org/2021.acl-demo.15.pdf)
+## Extract the request rather than the entire page
 
-Keep three separate representations where justified: the source artifact, extracted content, and a normalization key used for comparison. NFC and NFKC are different choices. Unicode’s specification warns that compatibility normalization can remove meaningful distinctions. For example, converting a superscript into an ordinary digit may be acceptable in a search key but damaging in scientific training text. Do not overwrite the only copy. [Unicode Normalization, revision 57](https://www.unicode.org/reports/tr15/tr15-57.html)
+Suppose a helpdesk exports this small page. Everything needed for the example is shown here; there is no website to visit.
 
-A practical record contains source URI, acquisition time, source hash, parser/version/configuration, extracted-text hash, normalization version, language/script estimate, and parent record. Keep rejection reasons instead of an unexplained “clean” flag.
+```html
+<nav>Pricing | Invoice help | Contact</nav>
+<article>
+  <h1>Customer request</h1>
+  <p>I cannot reset my password.</p>
+</article>
+```
 
-Audit fixed page families before and after a parser upgrade: news, forums, tables, code, scanned documents, short pages, and multiple scripts. Check missing content and inserted clutter, not just character count. Test accents, combining marks, nonbreaking spaces, indentation, decimal separators, and units. Missing text can create false labels downstream: a statement whose “not” disappears is a different example.
+Our intended input is the customer's request. A crude extractor that joins all visible text might produce:
 
-FineWeb2’s 2025 work shows why English-derived thresholds do not simply transfer across languages. Word segmentation and language-identification confidence interact with filtering. The pipeline was ablated on nine languages and evaluated on fourteen, despite much wider released coverage; bias and diversity were not measured by its chosen evaluation tasks. [FineWeb2, v1](https://arxiv.org/html/2506.20920v1)
+```text
+Pricing Invoice help Contact Customer request I cannot reset my password.
+```
 
-## Detect related records before deciding what to keep
+The words “Invoice help” came from navigation, not the customer. They could mislead our billing rule or a later classifier. A task-aware extraction produces:
 
-Exact hashes find byte-identical or normalized-identical records. Near-duplicate methods find substantial overlap; substring methods catch copied passages inside otherwise different documents. None proves that two examples mean the same thing. Lee et al. combine exact substring and approximate document matching, showing less memorized output and improved training efficiency in their studied language models. Their thresholds are experimental choices, not universal defaults. [Deduplicating Training Data, ACL 2022](https://aclanthology.org/2022.acl-long.577.pdf)
+```text
+I cannot reset my password.
+```
 
-Separate three decisions: detecting related records, assigning related records to a split, and choosing their training weights. Deduplication is not always “keep one, forget the rest.” FineWeb2 retains original cluster sizes and uses filtering statistics to guide selective upsampling. In its experiments, moderate duplication can indicate useful content; enormous repeated clusters and completely unique material can have different quality profiles. [FineWeb2](https://arxiv.org/html/2506.20920v1)
+The output is shorter, but shortness is not the goal. The goal is to retain the intended content and exclude irrelevant material. If the customer had written “The Invoice help page is broken,” those words would belong in the request and must stay. An extractor cannot safely solve the problem by deleting every occurrence of “invoice.”
 
-Audit sampled duplicate pairs and near-threshold nonmatches. Check whether changing one date, number, or negation changes the task answer. Preserve conflicting labels for review. Retain cluster ID, match method, similarity, representative choice, and original multiplicity. Split by the relevant entity or document family before making derivatives, then verify cross-split similarity. A dataset with fewer rows is not necessarily a better dataset.
+Repeated navigation and footer material is often called **boilerplate**. Real webpages place content in many structures, so a rule that works on this tiny example needs testing on other page types. Trafilatura's [published extraction study](https://aclanthology.org/2021.acl-demo.15.pdf) evaluates that problem on actual webpages. It is a useful tool study, not evidence that any parser will identify your intended training content automatically.
 
-## Audit exposure to evaluation material
+## Keep three versions for three jobs
 
-Deduplicating the training corpus does not establish separation from evaluation. Search training candidates against benchmark questions, answers, rationales, source documents, and transformed relatives where available. Version the benchmark exclusion list and record what matching can and cannot detect. Private holdouts still need access and release controls.
+Consider the invoice record again:
 
-The 2025 Emperor’s New Clothes study evaluates twenty benchmark-update strategies with ten LLMs, five benchmarks, and two constructed contamination settings. It finds no strategy that consistently combines strong fidelity with resistance across its experiments. A reworded question can remain learnable from exposure, or become a different test. Its scope is updating existing benchmarks under controlled contamination; it does not show that every possible contamination defense fails. [ICML 2025 research, v1](https://arxiv.org/html/2503.16402v1)
+| Representation | Value | Why keep it? |
+| --- | --- | --- |
+| Original source | `  PLEASE\tSEND my invoice.  ` | Evidence of what arrived |
+| Extracted message | `  PLEASE\tSEND my invoice.  ` | The selected message, without unrelated source fields |
+| Comparison form | `please send my invoice.` | A consistent key for this task's duplicate check |
 
-Audit contamination claims at the example level. Report overlap rates, human-checked false matches, remaining uncertainty, and scores with suspected overlaps removed. Never convert “our detector found none” into “the corpus is contamination-free.”
+Extraction changes nothing here because the JSONL field already identifies the message. That is an advantage of a clearly structured source. The original is still valuable: when the comparison policy is wrong, we can rebuild from it.
 
-## Turn a cleaning recipe into a measured change
+The supplied lab also uses the comparison form as its model-facing text. That is a deliberate simplification for case-insensitive helpdesk routing. Other tasks should keep a separate training representation. In code, `US` and `us` might name different things. In mathematics, `x²` and `x2` do not necessarily mean the same expression.
 
-Keep an immutable input manifest and run each recipe into a separate candidate release. Count records at every boundary: attempted, decoded, schema-valid, extracted, selected and emitted. Rejections need mutually intelligible reasons; a row can also carry several diagnostic flags. Preserve a quarantine that permits investigation without quietly returning rejected rows to training. Protect that quarantine with the same access rules as the source.
+**Unicode** is the system used to represent written characters. Some visually similar characters have different encodings. NFC normalization brings canonically equivalent ways of writing a character, such as an accented letter or that letter plus a combining accent, into a common form. NFKC goes further and also merges certain compatibility forms, such as fullwidth letters. The lab uses NFKC; case folding removes case distinctions. A second normalization brings any new character combinations introduced by case folding back into a consistent form. Then the lab collapses whitespace. You do not need to memorize those names to understand the decision: this recipe intentionally treats some different strings as equivalent.
 
-A minimal audit ledger contains the stage and recipe version; input/output counts and units; random-sample selection method; targeted failure slices; reviewed count; adjudicated error count; unresolved count; and reviewer guide version. Rate denominators must match the question. Extraction error over successfully decoded pages does not measure archive corruption; duplicate-pair precision does not measure missed duplicates; retained-row label precision does not measure coverage lost by filtering.
+Unicode's [normalization specification](https://www.unicode.org/reports/tr15/tr15-57.html) warns that compatibility normalization can remove meaningful distinctions. That is why we preserve the original and explain the policy rather than simply naming it “clean text.” The tested lab includes a combining-mark regression because a superficially reasonable normalization recipe was initially unstable when applied twice.
 
-For a parser replacement, keep a fixed, manually inspectable regression set with tables, code, lists, short records and Unicode edge cases. Compare both extraction outputs against the source. Sample additional changed records and some unchanged records: a detector that only reviews differences can miss shared errors. Review length ratios as screening signals, never as final quality labels. Report exact sample counts and avoid claiming that a small zero-error sample proves no errors exist.
+## Decide whether a match is truly a duplicate
 
-## The supplied lab and its deliberate limits
+For our routing task, these two inputs can share one example:
 
-The first-release program actually runs a bounded audit: malformed rows, canonical duplicates, source-family components, weak-label coverage and separately supplied reference-label comparisons. It does not extract arbitrary websites, implement semantic deduplication or prove contamination absence. The distinction matters. A working exact-content check is a useful baseline with a known detection boundary, not a placeholder for an undocumented semantic detector.
+```text
+Please send my invoice.
+PLEASE SEND MY INVOICE.
+```
 
-A realistic follow-on should add a frozen set of near-duplicate pairs, including adversarial nonduplicates that differ in a number or negation. Measure precision and recall against that adjudicated set, then inspect samples near the selected threshold. Report residual undetected similarity as an uncertainty. Preserve original multiplicity even when only one training representative is emitted; it may be needed for source weighting and withdrawal later.
+These cannot be collapsed merely because most words match:
 
-**Try it.** Compare case-preserving NFC text with a case-folded duplicate key. Invent a pair whose target changes under a normalization that would otherwise seem harmless. Record the collision instead of silently choosing the first label.
+```text
+Please refund this payment.
+Please do not refund this payment.
+```
+
+The extra “not” changes the requested action. **Exact matching** compares the chosen representation for equality. **Near-duplicate matching** looks for substantial similarity, such as shared phrases. It can find repeats that exact matching misses, but it can also nominate distinct examples like the refund pair.
+
+A duplicate detector therefore supplies evidence for a decision. It does not decide the target's meaning. Keep the relation and the originals long enough to inspect disputed matches. The next sections of the assembled book explain how these relations also protect independent splits.
+
+Deduplication can improve language-model training in specific experiments, as [Lee et al.](https://aclanthology.org/2022.acl-long.577.pdf) show. It does not follow that removing every similar record is always helpful. FineWeb2 studies both filtering and selective repetition; its [version-1 paper](https://arxiv.org/html/2506.20920v1) also shows why language-specific processing matters. Those findings motivate measured choices rather than a universal “remove more” rule.
+
+## Audit a change by checking the source
+
+An **audit** checks a sample of outputs against the evidence needed to judge them. Here is a completely worked, invented audit of three extracted requests. It illustrates how to count errors; it is not a run of a webpage extractor.
+
+| Intended request in the source | Extractor output | Judgment |
+| --- | --- | --- |
+| I cannot reset my password. | Invoice help I cannot reset my password. | Wrong: navigation was added |
+| Do not refund this payment. | Refund this payment. | Wrong: negation was lost |
+| Please send my invoice. | Please send my invoice. | Correct for this task |
+
+One of three outputs preserves the intended request. There are two different failure types: added clutter and lost meaning. A revised extractor must address both. Checking only the output length might find the first problem while missing the second, because the shortened second output looks tidy.
+
+To evaluate a real change, save the old and new outputs for the same sources. Review ordinary cases as well as cases the program flags as suspicious. Record how the sample was chosen and count errors over all reviewed cases. If you deliberately select the three worst pages, their error rate describes that selection, not the entire source population. The existing audit chapter develops the sampling and uncertainty details.
+
+**Contamination** is a different danger: evaluation material, or close relatives of it, enters the training-production process. Cleaning a corpus internally does not prove separation from a test set. Rewording benchmark questions is not a dependable cure either; [a 2025 study of benchmark updates](https://arxiv.org/html/2503.16402v1) finds important tradeoffs between preserving a test and resisting prior exposure. Keep the source relationships and evaluation exclusions visible rather than declaring a corpus contamination-free because one matcher found nothing.
+
+## Exercise make one defensible cleaning decision
+
+This exercise runs no code and requires no downloads. The source strings and expected reasoning are on this page.
+
+1. Copy the password-reset HTML example. Mark which words belong to the request and which come from the surrounding page.
+2. For the invoice pair, write one comparison form and retain both originals.
+3. For the refund pair, explain why the records must remain distinct even though they are similar.
+4. Add one row to the audit table in which a shorter output is worse.
+
+Your expected result is a small before/after record with a reason for every change. If you cannot determine whether content belongs in the input, the missing piece is the task definition or source evidence, not necessarily a more elaborate cleaning tool.
+
+For an optional executable check, reuse the first lesson's supplied builder and inspect `lineage.jsonl` and `quarantine.jsonl`; no new files or packages are required. It demonstrates normalization and exact deduplication of JSONL, not webpage extraction or semantic similarity. After this lesson, you should be able to explain what was preserved, what was changed and how you would notice a harmful change. The following independence sections use those source relationships to decide what can safely be held out for evaluation.

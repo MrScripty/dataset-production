@@ -1,35 +1,86 @@
 # Write rules and learn from unlabeled examples
 
-Two routes can reduce the number of labels that people must supply. Programmatic rules offer noisy evidence about a label; semi-supervised methods learn from both trusted labels and unlabeled examples. Neither route permits us to spend our final test set while designing the method.
+We now know how to define labels and how to change an input without accidentally changing its target. The next problem is cost: what if we have many messages but only a small number of checked labels?
 
-## Begin with rules that can abstain
+There are two different ways to use that material. We can write rules that propose labels, or we can let an already trained model propose labels for additional examples. Both can reduce repetitive labeling work. Both can also repeat the same mistake thousands of times. This lesson follows a few messages closely enough to see the difference.
 
-A labeling function is a small program that returns a proposed label or abstains. For support tickets, one function might vote “billing” when it sees “charged twice”; another might use an account-event record; a third might use a legacy classifier. Abstention matters: a rule that recognizes billing should not silently label every other ticket “technical.”
+## Let a rule vote without pretending it knows everything
 
-Snorkel combines overlapping, conflicting labeling-function outputs into probabilistic training labels, then trains a separate predictive model. Its label model and its final classifier have different jobs. Crucially, the original setup still assumes a labeled development set and a blind held-out test set. “No hand-labeled training set” does not mean “no human-checked evidence.” [Snorkel, PVLDB 2017](https://www.vldb.org/pvldb/vol11/p269-ratner.pdf)
+A **labeling function** is a small program that proposes a label or declines to answer. Declining is called **abstaining**. The supplied release lab has three functions:
 
-Three regexes derived from the same keyword list are not three independent witnesses. Agreement can represent shared mistakes. Coverage also differs from quality: a rule labeling almost everything can be consistently wrong on one subgroup. The original paper examines when majority voting is sufficient and when modeling source dependencies helps; its empirical results do not guarantee recovery from arbitrary, correlated heuristics. [Snorkel](https://www.vldb.org/pvldb/vol11/p269-ratner.pdf)
+| Function | Clue it recognizes | Proposed label |
+| --- | --- | --- |
+| Billing rule | Whole words such as invoice, refund, charge or payment | billing |
+| Access rule | Whole words password, login or locked | access |
+| Failure rule | Whole words crash, crashes, error or frozen | technical |
 
-Audit each function’s coverage, class balance, conflicts, and estimated precision on an independently labeled sample. Record the rule version and upstream model or dictionary. Review cases where all functions agree, as well as disagreements and complete abstentions. Compare majority vote, the label model, and the trained classifier on the same untouched test set. The last comparison establishes whether training generalizes beyond the rules.
+A whole-word match means `charge` does not match `charged`. These are deliberately simple rules. They do not understand what the message is asking, and they have no learned parameters.
 
-## Predictions as targets
+Apply them to four supplied records. A dash means that the function abstains.
 
-Weak supervision supplies imperfect labels from outside rules or sources. Semi-supervised learning uses labeled and unlabeled examples together. In self-training, a teacher predicts labels for unlabeled examples and a student learns from selected predictions; the roles may be successive versions of the same model. Those predictions are pseudo-labels, not verified annotations.
+| Message | Billing vote | Access vote | Failure vote | Combined result |
+| --- | --- | --- | --- | --- |
+| Please send my invoice. | billing | — | — | billing |
+| I was charged twice for renewal. | — | — | — | abstain |
+| The login animation crashes. | — | access | technical | conflict |
+| The charge indicator stays at zero. | billing | — | — | billing, but the reference says technical |
 
-Consistency training asks predictions to agree across suitable versions of an input. FixMatch combines the ideas: predict on a weakly augmented image, retain a sufficiently confident hard pseudo-label, then train on a strongly augmented version. The confidence cutoff controls a quality–quantity trade-off. Its famous small-label image results are benchmark findings, not a promise that the same recipe works for arbitrary text or production traffic. [FixMatch, NeurIPS 2020](https://proceedings.neurips.cc/paper/2020/file/06964dce9addb1c5cb5d6e3d9838f733-Paper.pdf)
+The combination rule is intentionally transparent: if all non-abstaining functions agree on a category, use it; if none vote, abstain; if categories disagree, keep a conflict. It does not give a special authority to the first rule or fill unresolved cases with a guess.
 
-A displayed confidence of 0.95 does not establish 95% correctness. Suppose 100 accepted examples contain 15 mistakes: their measured precision is 85%, regardless of the cutoff. In the 2025 CSL segmentation study, correct and incorrect pixels could both occupy high-confidence regions. Its remedy considers more of the probability distribution and contextual supervision; that evidence is specific to semantic segmentation. [When Confidence Fails, v1](https://arxiv.org/html/2509.16704v1)
+The last row explains why a filled label is not necessarily a trustworthy label. The routing policy concerns the reported problem. Here “charge” describes a device indicator, not a payment. A rule has supplied a **weak label**, meaning an uncertain piece of supervision rather than a verified answer.
 
-SEVAL’s June 2026 revision provides a useful update: learn class-specific pseudo-label refinement and thresholds using a held-out portion of labeled training data. Its analysis favors estimating selected-label precision over trusting raw confidence. However, its theoretical criteria use assumptions, including smoothness approximations; the experiments largely target balanced test performance. It is not a universal guarantee under arbitrary domain shift. [SEVAL, v3](https://arxiv.org/html/2407.05370v3)
+## Measure reach separately from correctness
 
-Audit accepted-label precision and acceptance rate separately for each class, source, and important slice. A rising average can hide a minority class receiving almost no supervision. Sample rejected examples too. Keep the teacher checkpoint, threshold, confidence, and round attached to every pseudo-label. Compare against a well-tuned supervised/transfer baseline and deliberately test out-of-class unlabeled examples: Oliver et al. found that adding mismatched unlabeled classes can degrade SSL performance. [Realistic Evaluation, NeurIPS 2018](https://papers.nips.cc/paper/7585-realistic-evaluation-of-deep-semi-supervised-learning-algorithms.pdf)
+A rule can be precise when it fires but cover very few examples, or cover many examples while frequently being wrong. **Coverage** measures how often it offers an answer. Agreement with separately supplied reference labels measures how often a scorable answer matches those references.
 
-## A small experiment before a larger model
+In the executed first-release fixture, the combined rules label 14 of 24 distinct examples. Coverage is therefore 14/24, about 58.3%. Only 13 of those predictions can be scored because one has conflicting reference labels; 10 match, giving 10/13 agreement. Five other examples are abstentions and five are conflicts. The rules do not get credit for those unresolved cases.
 
-Use the first-release fixture to inspect each rule separately. Its consensus is deliberately simple: agreement emits a weak label; conflicting votes and total abstention remain unresolved. This is not the probabilistic label model in Snorkel. Keep the separately authored reference file out of the rule inputs and the exported training features. A student trained on these votes would require an additional experiment; this lab does not claim that it generalizes.
+Suppose we copy the billing keyword list into three functions with different names. Three matching votes would look more impressive, but all three could make the same “charge indicator” mistake. Their errors are **correlated**: they depend on the same clue. Agreement is useful evidence only when we understand how it was produced.
 
-For a later self-training experiment, first freeze source families and splits. Reserve labeled training data for fitting, a separate labeled development portion for threshold selection, and a final untouched evaluation. Treat the unlabeled pool as training-only material. Train a supervised baseline, save its checkpoint, generate pseudo-labels, and retain teacher version, round, score and selection reason. Compare the next model with the baseline at a stated data/compute budget. Report both acceptance rate and independently audited accepted-label precision. A second round is a new selection intervention, not an automatic improvement.
+**Programmatic weak supervision** uses such noisy labeling sources systematically. [Snorkel](https://www.vldb.org/pvldb/vol11/p269-ratner.pdf) is a research example that models relationships among labeling functions to produce probabilistic training labels. It then trains a separate predictive model. The supplied lab does not implement that learned label model; it lets you inspect the simpler voting baseline first. Even Snorkel's original setup retains checked development and held-out test data. Automating training-label production does not remove the need for independent checking.
 
-Deliberately add a small out-of-task challenge pool. If a billing/technical classifier confidently labels a weather forecast, its confidence is not proof the forecast belongs in either class. Quarantine unfamiliar sources until the task and label space apply. Review class coverage after every round, including accepted labels from classes the teacher rarely predicts. Do not balance classes by overwriting unfamiliar cases with desired labels.
+## A model can also propose a label
 
-**Try it.** Explain why an all-abstain row is different from a conflict. Identify two correlated rules. Write one new rule using only development material, record the examples that motivated it, and leave the disclosed final fixture audit out of tuning. For a real experiment, obtain a new unseen test set once the supplied test examples have become familiar.
+Now imagine that we trained a small classifier on checked examples. Call that model the **teacher** because it supplies proposed answers to a later learner. A label predicted by a model and reused as a training target is a **pseudo-label**. The later learner is the **student**; it may be a new version of the same model rather than a different architecture.
+
+The following table is an invented teaching example, not output from a model run:
+
+| Previously unlabeled message | Teacher's proposed label | Reported confidence | Manual review for this example |
+| --- | --- | --- | --- |
+| Please email my invoice. | billing | 0.97 | billing |
+| My account is locked. | access | 0.94 | access |
+| The charge indicator stays at zero. | billing | 0.98 | technical |
+| Where is the export button? | technical | 0.61 | technical |
+
+If we keep only predictions with confidence at least 0.90, we keep the first three. Two of the three agree with the manual review, and the most confident one is wrong. The cutoff selected confident predictions; it did not prove their correctness. The fourth prediction is correct in this illustration but would be rejected by that cutoff.
+
+**Self-training** repeats this process: train a teacher from available labels, propose pseudo-labels, select some, and train a student using the original checked labels plus the selected pseudo-labels. A student can learn beyond individual keyword rules, but it can also reinforce a teacher's error. Save the teacher version and selection decision with each pseudo-label so you can trace that error back.
+
+**Semi-supervised learning** is the broader category of methods that use both labeled and unlabeled training examples. Self-training is one route within it. The unlabeled examples must still fit the task: a weather forecast is not automatically a billing, access or technical request just because a model confidently chooses one of those three labels.
+
+## Consistency adds a second kind of evidence
+
+The augmentation lesson showed a square moved within an image. For a category task, we expect the same answer before and after the move. **Consistency training** encourages a model to produce compatible predictions for such valid variations.
+
+One approach, [FixMatch](https://proceedings.neurips.cc/paper/2020/file/06964dce9addb1c5cb5d6e3d9838f733-Paper.pdf), first predicts a category from a gently changed image. If that prediction meets its confidence criterion, it trains using a more strongly changed version with the proposed category as target. “Weak” and “strong” augmentation describe how much the image is changed here; they do not mean that the resulting label has been independently verified. Both versions must still support the category.
+
+Imagine the teacher calls the complete square a square, then the strong crop removes most of it. Consistency would now encourage agreement across an invalid or ambiguous transformation. We must evaluate the augmentation policy and the pseudo-label policy together. This is why learning the augmentation idea first matters.
+
+## What would a real comparison need?
+
+Keep a supervised baseline: a model trained only on the trusted labels. Compare it with the method that also uses the unlabeled pool, under a stated training budget. Use development labels to choose rules and thresholds; keep final-test labels out of those decisions. Check accepted pseudo-labels and rejected ones by category, so a good overall average does not hide a class receiving almost no supervision.
+
+Research cautions reinforce this plan. [Oliver et al.](https://papers.nips.cc/paper/7585-realistic-evaluation-of-deep-semi-supervised-learning-algorithms.pdf) show problems when unlabeled data do not match the task. A [2025 segmentation study](https://arxiv.org/html/2509.16704v1) examines failures of high-confidence selection. [SEVAL's June 2026 revision](https://arxiv.org/html/2407.05370v3) studies learning refinements and class-specific thresholds from held-out labeled training data. These are methods to investigate after the basic experiment is understood, not dependencies required for this lesson.
+
+## Exercise inspect the votes before changing the method
+
+For the core exercise, nothing runs and nothing must be downloaded. Use the four-row voting table and the invented teacher table above.
+
+1. Explain why an abstention is different from a conflict. Expected answer: one has no proposed category; the other has incompatible proposed categories.
+2. Add a fourth rule that copies the billing rule. Explain why its extra agreement supplies no independent evidence.
+3. Apply a 0.90 confidence threshold to the teacher table. You should retain three examples, two of which agree with the manual review.
+4. Write one question you would ask before trusting the unlabeled pool. For example: do these records actually belong to the three-category helpdesk task?
+
+For an optional code inspection, reuse the supplied first-release builder; it needs no new packages or data. Run `python3 examples/first-release/build.py --out run-weak-labels` from the repository root, then inspect `audit.json` and the `rule_votes` fields in `release.jsonl`. Expect the measured 14/24 coverage and 10/13 agreement described above. Use a fresh output directory. This program executes rule voting only; it does not train a teacher, student, Snorkel model or FixMatch model.
+
+**What you have learned.** You can explain who supplied a label, how it was selected, why it might be wrong, and what independent evidence would be needed to trust it. A larger model or a more elaborate labeling method can now be evaluated against a baseline you understand.

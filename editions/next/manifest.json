@@ -62,20 +62,20 @@
     {
       "segments": [
         {
-          "path": "editions/next/chapters/weak-semisupervised.md"
-        }
-      ],
-      "title": "Write rules and learn from unlabeled examples",
-      "id": "weak-semisupervised"
-    },
-    {
-      "segments": [
-        {
           "path": "editions/next/chapters/augmentation.md"
         }
       ],
       "title": "Choose transformations that preserve the target",
       "id": "augmentation"
+    },
+    {
+      "segments": [
+        {
+          "path": "editions/next/chapters/weak-semisupervised.md"
+        }
+      ],
+      "title": "Write rules and learn from unlabeled examples",
+      "id": "weak-semisupervised"
     },
     {
       "segments": [

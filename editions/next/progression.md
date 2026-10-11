@@ -4,6 +4,8 @@ Author: Puma
 
 A reader should finish a small, inspectable release before being asked to collect a large corpus, buy equipment or choose a neural architecture. Every track begins with supplied or openly accessible material. New sensors, microphones, robots and specialist hardware are optional collection projects, never entry requirements.
 
+The first lesson explains the full example on the page before offering a program to run. Read it without installing anything; then choose whether to try its optional CPU exercise. You do not need to follow every acquisition link or complete every project track.
+
 ## The shared prerequisite spine
 
 1. **Make one release.** Read ten records, find a mistake, run the authored fixture pipeline, inspect its quarantine and manifest, and reproduce its hashes.
@@ -21,7 +23,7 @@ The outline is organized around outcomes rather than a required chapter count.
 
 **First release and common foundations.** Build the supplied text release, define the training claim, establish permissions/lineage, then treat extraction, normalization, duplicate relationships and independent splits as one connected production problem. Learn annotation and audits once, using the same small examples.
 
-**Improve supervision and coverage.** Add weak and semi-supervised labels, choose valid transformations, select useful examples, and compare mixtures or synthetic-generation recipes. Existing treatment of uncertainty, active learning, DoReMi, influence and synthetic verification remains part of this progression; these were already strengths of the delivered edition.
+**Improve supervision and coverage.** Choose valid transformations, then add weak and semi-supervised labels, select useful examples, and compare mixtures or synthetic-generation recipes. Existing treatment of uncertainty, active learning, DoReMi, influence and synthetic verification remains part of this progression; these were already strengths of the delivered edition.
 
 **Choose a representation track.** Apply the common contract to text/retrieval, reasoning and trajectories, vision, audio, and optional physical/3D data. A reader need not finish every track. Each asks what new evidence that representation requires instead of repeating the full release workflow.
 
@@ -45,6 +47,8 @@ The draft assembly moves existing sections and combines the overlapping extracti
 Model names are options to motivate contracts, not evidence that the draft implements or benchmarks them. At each level a smaller baseline should be allowed to win. A fixed regular grid may justify a small convolutional model without introducing a graph network first.
 
 ## Exact beginner acquisition paths
+
+These routes are optional. Route A runs the supplied opening lab; B and C support later alternative projects. None is a prerequisite for understanding the self-contained worked examples in the seven new lessons.
 
 ### A Supplied text release
 

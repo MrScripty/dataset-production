@@ -1,64 +1,133 @@
 # Build your first release from supplied data
 
-Your first result will be a directory of inspectable data and a report explaining how it was made. You need Python 3.10 or later, a terminal and the files supplied with this repository. You do not need a GPU, sensors, a model download, an account or a paid service. The model-training choices come after you can reproduce and explain the data.
+Imagine a small helpdesk with three queues. Questions about invoices go to **billing**, questions about getting into an account go to **access**, and reports of broken software go to **technical support**. We want a future model to read a message and choose a queue.
 
-The task is intentionally small: route fictional helpdesk messages into billing, access or technical categories. A few keyword rules will offer imperfect labels. Some messages make the rules disagree; some trigger no rule; some produce a confident-looking mistake. We keep those outcomes visible. A real support classifier would need a representative, permitted corpus and an independent evaluation far beyond these teaching records.
+Before training that model, we need to decide what examples will teach it. A training example has an **input**, the information the model receives, and a **target**, the answer we want it to learn. For our task, one example could be:
 
-## Inspect the source before running a pipeline
+| Input message | Target queue |
+| --- | --- |
+| Please send my invoice. | billing |
 
-Open `examples/first-release/data/records.jsonl`. JSONL is one JSON object per line. Each valid row names a record ID, source ID, family ID and text. A family says which examples are related strongly enough that they must remain together for this exercise. The source also includes deliberately malformed lines so that rejection can be tested rather than merely promised.
+A folder full of messages is only source material. A dataset for this task must connect messages to labels, explain uncertain labels, and keep some examples aside to check what a model has learned. This chapter builds that small data product. You can understand the whole lesson from the examples on this page. Running the supplied program is an optional final step.
 
-Open the separate `data/gold.json` only to understand the evaluation contract. It contains authored reference labels. It is not fed to the labeling rules or used to choose the split. In a real project, development labels help you design a rule, while a protected test set is held back for a final comparison. Here the complete public fixture is available for teaching; once you study it, it can no longer serve as unseen evidence about your own improvements.
+## Decide which team should own a request
 
-Read two records with the same underlying message but different whitespace or character form. Should they count as two independent examples? Now look for related records whose text is different. Exact duplication and shared family membership are different relations. The release builder must respect both.
+A label is a decision under a policy, not a fact supplied by a keyword. For this fictional helpdesk, use the following ownership rules:
 
-## Run the supplied builder
+- **Billing** handles money and billing documents: charges, payments, refunds, invoice amounts and receipt requests.
+- **Access** handles getting into an account: credentials, password resets and account locks. An unspecified error during password reset stays with this team.
+- **Technical** handles concrete application/interface failures, such as crashes, frozen screens, blank pages and broken links. Reports about help-article content also go here for triage, even if their wording does not yet state a clear fault.
 
-From the repository root, choose a new empty output path:
+When a message mentions several topics, identify the reported problem. “The invoice link returns an error” reports a broken link, so its supplied reference is technical. “Password reset says error” reports an unsuccessful account-recovery operation without a specific interface fault, so its reference is access. “The login button opens a blank page” names a concrete interface failure and goes to technical. Another organization could choose different owners; its guide and labels should reflect that choice consistently.
 
-```sh
-python3 examples/first-release/build.py --out /tmp/dataset-first-release
+These are conventions for an authored fixture, not universal customer-service categories. The deliberately contradictory reference labels discussed below are defects to detect, not additional routing rules.
+
+## Follow one message from source to example
+
+The supplied fictional collection contains these two records:
+
+| Record | Original text |
+| --- | --- |
+| r01 | `Please send my invoice.` |
+| r02 | `  PLEASE\tSEND my invoice.  ` |
+
+Here `\t` represents a tab. For routing a request, those differences in capitalization and spacing should not change the answer. The program makes a comparison form by standardizing the characters, ignoring case and collapsing whitespace. Both become:
+
+```text
+please send my invoice.
 ```
 
-The command does not fetch anything. Its outputs include training records, provenance/lineage, a quarantine, an audit and a manifest. Read the [lab README](../../../examples/first-release/README.md) for the exact filenames and field definitions. Reusing a nonempty output directory is refused so that one experiment cannot silently overwrite another.
+That comparison form is called **normalized text**. Because the normalized texts are exactly equal, the builder emits one example instead of counting the same message twice. This step is **deduplication**: identifying repeated examples and deciding how to represent them.
 
-The builder performs a sequence of small decisions:
+We still keep both originals. A separate record says that the emitted example came from r01 and r02. That history is **lineage**. It lets us answer “Where did this come from?” later, rather than losing the second source when we remove a duplicate. The normalization chapter will explain why this particular cleanup policy is appropriate for our toy task but unsafe for some other tasks.
 
-1. Preserve input bytes and their hashes, and parse each line with strict schema checks.
-2. Keep invalid records in a quarantine with the raw evidence and rejection reason.
-3. Make a documented normalization key and retain original text in lineage.
-4. Collapse equal canonical text while preserving every source relationship.
-5. Connect duplicates, shared sources and shared families before allocating whole components to train, development and test.
-6. Run labeling functions that vote for a category or abstain. Agreement supplies a weak label; conflicts remain unresolved.
-7. Compare predictions with the separate authored references and report counts and limitations.
-8. Write immutable candidate files and their SHA-256 hashes into a manifest.
+Now give the example a label. A simple rule says, “If the message contains the whole word invoice, propose billing.” It produces:
 
-A hash identifies bytes; it does not certify that a label is correct or a source is permitted. A successful parse establishes that a record meets the schema; it does not establish that the record belongs in the intended application. The pipeline deliberately keeps these judgments separate.
+```text
+text:         please send my invoice.
+weak_label:   billing
+label_status: labeled
+```
 
-## Read the failures as carefully as the successes
+It is a **weak label** because a fallible rule supplied it. Nothing has learned from data yet. The program is preparing examples, not training a classifier.
 
-A rule that sees “password” may vote for access. If another rule sees “error,” the two may disagree. That conflict is different from an all-abstain message, for which no rule supplied evidence. Neither should be filled with an arbitrary class merely to obtain a complete column.
+## Keep the cases the rule cannot explain
 
-If several rules agree because they share the same dictionary, their agreement is not independent confirmation. If a duplicate group has inconsistent authored reference labels, there is no single trustworthy gold target for its accuracy calculation until someone resolves the disagreement. Count and exclude that ambiguity explicitly instead of choosing whichever label makes the rule look better.
+Consider three more messages from the same supplied collection:
 
-The current executed fixture results are recorded in the lab evidence and [validation record](../validation.md). These measurements describe this exact fixture and recipe. They are not estimates of support-ticket accuracy in production and are not results from a trained model. Keep that sentence next to any number you copy into a report.
+| Message | What the rules do | What that means |
+| --- | --- | --- |
+| I was charged twice for renewal. | No vote | The billing rule recognizes `charge`, but not `charged` |
+| The login animation crashes. | Access and technical votes disagree | Two rules see different clues |
+| The charge indicator stays at zero. | Billing vote | The word `charge` is about a device indicator here; the supplied reference says technical |
 
-## Check the emitted bytes
+The first case is an **abstention**: the rules decline to propose a label. The second is a **conflict**: they propose incompatible labels. The third is a mistake that would look ordinary if we checked only whether a label was present.
 
-Run the automated tests:
+We record all three outcomes. Filling every empty label with a guess would make the file look more complete while hiding what we do not know. Deleting every difficult message would make the task easier while shrinking its coverage. Later chapters teach ways to improve these labels and measure the tradeoffs.
+
+To count mistakes, we need answers that do not simply repeat the rules. The supplied `gold.json` file contains separately authored reference labels. “Gold” is a conventional filename, not a promise that the labels are infallible. One duplicate pair deliberately has conflicting reference labels, and two examples have none. The audit reports those limitations instead of forcing an answer. This is authored teaching material, not an independent human annotation study.
+
+## Keep learning examples separate from checking examples
+
+Suppose a student practices one exam question and then receives the same question with different spacing on the exam. A correct answer tells us little about handling a new problem. The same issue affects models.
+
+We therefore divide the examples into three **splits**, or assigned groups:
+
+- **Training:** material a later model may learn from
+- **Development:** material used to choose rules or improve the method
+- **Test:** material reserved for the final check
+
+Related examples must travel together. In our fixture, r01 and r02 are duplicates. Record r03, “Please email a receipt,” belongs to the same declared family as r02. That connects all three originals, even though r03 has different words. Putting r03 in a test set while its close relatives are used for training would not test a genuinely independent family.
+
+The builder joins these relationships before assigning splits. It does not consult the reference labels to choose where a record goes. The resulting files have 12 training examples, 5 development examples and 7 test examples. These are small teaching sets, not enough evidence to estimate a real helpdesk model's reliability. Because every example and its answers are public in this lesson, they also cease to be an unseen test once you study them.
+
+## What the finished release contains
+
+A **release** is a named, fixed set of files that someone else can inspect or use. Its contents should not silently change while keeping the same identity. Our release contains cleaned examples, the original records, their lineage, rejected records, an audit and a manifest.
+
+The **audit** is a report of what happened. Here are the results actually produced by the supplied builder:
+
+| Question | Measured answer |
+| --- | --- |
+| How many lines arrived? | 30 |
+| How many were valid records? | 28 |
+| How many were rejected and kept aside? | 2 |
+| How many distinct normalized examples remain? | 24 |
+| How many get a weak label? | 14 |
+| How many have no vote or conflicting votes? | 5 with no vote; 5 with conflicts |
+| How many scored weak labels agree with the reference? | 10 of 13 |
+
+**Coverage and correctness answer different questions.** The rules provide labels for 14 of 24 examples, or about 58.3% coverage. They agree with the usable references on 10 of 13 scored predictions, or about 76.9% agreement. The first denominator asks how much of the collection received a label; the second asks how often a scorable prediction agrees. Neither includes the other by implication.
+
+Why 13 rather than 14 in the last row? One labeled example has conflicting reference labels, so we cannot fairly score it against a single answer. Two other examples have missing reference labels, but both are abstentions here, so neither was among the 14 predictions to begin with. Ten of the remaining thirteen agree. This is about 76.9%, but it describes only the predictions that can be scored in this deliberately tiny fixture. It does not say that 76.9% of all real helpdesk messages will be routed correctly.
+
+The **manifest** describes the files and the recipe that produced them. It records a **hash**, a compact fingerprint of bytes, for each output. If the bytes change, the fingerprint is overwhelmingly likely to change too. A hash helps detect changes; it does not establish correctness, permission or authorship.
+
+The two rejected lines are preserved in **quarantine**, a separate file for investigation. One line is broken JSON; the other lacks a required family ID. They are expected faults in this fixture. The useful result is that the builder finds them and explains the rejection, rather than crashing or silently losing them.
+
+## Optional exercise run the supplied release builder
+
+**What you need.** Python 3.10 or later and this repository's files. If you are reading on GitHub without a local copy, open the [draft branch](https://github.com/MrScripty/dataset-production/tree/edition/beginner-practical-2026-10), select that branch rather than main, and choose Code → Download ZIP. Extract it and open a terminal in the folder containing the top-level README. The data and program are already included. No dataset, model weights, Python package, sensor, account or paid service must be fetched separately.
+
+The program you will run is `examples/first-release/build.py`. It reads the supplied `data/records.jsonl` and `data/gold.json` beside it. JSONL means one JSON record per line; JSON is the key-and-value format used in these files. You do not need to write either file for this exercise.
+
+From the repository root, run:
+
+```sh
+python3 examples/first-release/build.py --out run-first-release
+python3 -m json.tool run-first-release/audit.json
+```
+
+The first command creates a new `run-first-release` directory. The second displays its audit in a readable form. Expect the counts in the table above. Open `quarantine.jsonl` to see the two rejected lines, and `lineage.jsonl` to follow the invoice example back to r01 and r02.
+
+If Python is not found, the runtime is not installed or uses a different command name on your system. If `examples/first-release/build.py` is not found, check that your terminal is in the repository root. If the output directory is nonempty, choose a new name such as `run-first-release-2`; refusal to overwrite an earlier release is intentional. If your counts differ, compare your input files and recipe with the supplied version before interpreting the result as an improvement.
+
+For the automated checks, run:
 
 ```sh
 python3 -m unittest discover -s tests -p 'test_first_release.py' -v
 ```
 
-Then build into a second empty directory and compare output hashes. Equal input bytes, recipe and runtime behavior should produce the same candidate. Reordering the input can change its byte hash and line-level provenance while leaving canonical examples and split allocation unchanged; those are different reproducibility claims. Read the tests to see which claim each assertion makes.
+A passing test means the specified behavior passed its checks. It does not turn the weak labels into trusted answers. The [lab README](../../../examples/first-release/README.md) explains each emitted field when you want implementation detail.
 
-Inspect one training row and follow it back through lineage to all original source records. Check that its protected component occurs in exactly one split. Look at achieved component counts, not just nominal percentages. Splitting a large family to make a ratio look tidy would break the evaluation claim.
-
-Finally, identify a quarantined row, an abstention, a conflict and a wrong weak label. Explain which would need a schema repair, a better rule, a new task definition or a human decision. This is the first practical success: you can account for the examples you made, including where their labels remain unreliable.
-
-## What to try next
-
-Choose one change using development material. Write its purpose before changing the program, and keep the previous candidate. Compare acceptance, error and coverage rather than celebrating a larger output count. Do not use the public fixture's final test results to tune repeatedly and then report the test as untouched.
-
-After this chapter, follow the common spine on training claims, permissions, extraction, independence and measurement. Then choose a project track. Numeric examples can lead to a linear model, images to a small classifier or segmenter, and text to a simple bag-of-words baseline. The data contract determines what those models will actually learn. The separate training book covers fitting and inference; this book remains responsible for making the input evidence understandable and testable.
+**What you have learned.** You can now distinguish source records, training examples, proposed labels and reference labels. You can follow an example's origin, recognize an abstention or conflict, and explain the denominator in an audit. That is enough to begin the shared chapters on defining the task, source permissions and independent evaluation. You do not need to choose a neural network yet.

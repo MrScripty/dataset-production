@@ -42,6 +42,14 @@ The narrow follow-up adds wrapping for long text/links, manifest-owned stable ch
 
 The updated full checks pass: **35 Python tests** (22 release-lab plus 13 assembly/navigation tests), **15 JavaScript tests**, draft assembly and `git diff --check`. New regressions verify long-link wrapping CSS, stable anchors after chapter reordering, all in-page destinations, group/range and unknown-reference handling, visible citation-text preservation, protected markup and duplicate-anchor rejection. These are structural and behavioral checks. The three changes await the requested browser recheck at their newly published commit; no new visual-pass claim is made here.
 
+## Beginner lesson revision
+
+The seven new chapters were rewritten after reader feedback that the earlier prose resembled implementation guidance rather than lessons. They now explain the problem and mechanism through visible examples before presenting optional tools. The opening includes the routing policy, an actual record-to-label walkthrough and coverage versus reference-agreement denominators. Augmentation is taught before semi-supervised consistency methods. The physical-data lesson centres on a supplied four-cell field; larger CAD, robotics and Rheon work is optional research.
+
+The subsequent full suite passes **42 Python tests**: the unchanged 22 release-lab tests, 13 reader/assembly tests and 7 new worked-example checks. All **15 JavaScript tests** pass. Draft assembly, local-link checks, stable internal destinations and `git diff --check` pass. Worked-example checks verify the displayed shape move/crop, temperature update and reversed rows, fraction format/value judgments, confidence-cutoff arithmetic, actual fixture denominators, chapter ordering and the illustrated loss of nested text.
+
+These added checks validate the consistency of the teaching examples. They do not turn the invented pseudo-label scores, fraction judgments, temperature rule or monitoring incident into trained-model, verifier-library, scientific-simulation or deployed-service results. The executable first-release fixture and its data are unchanged. The revised pages still need visual review at their new commit; prior browser findings should not be treated as a fresh layout pass on new prose.
+
 ## Checks not completed
 
 The original local browser visual-QA attempt was made on the cloud workspace. Playwright's bundled Chromium was absent; the installed Chromium could not launch because the environment forbids a required process socket, including the permitted escalation attempt. HTML generation and structural checks passed. The later separate browser review is recorded above; a full corrected mobile-layout pass is still pending. A visual review is required before calling the new reader audience-ready.
