@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="334" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 334" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="334"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-334)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="320" style="font-family: SansB; font-size: 12px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,640) scale(1,-1)">Two queues with different denominators</text>
+			<text x="0" y="303" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,606) scale(1,-1)">Original example: a 10,000-row frozen release</text>
+			<rect x="0" y="182" width="238" height="100" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(98%,94%,87%); fill-rule: evenodd;"/>
+			<text x="11" y="262" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,524) scale(1,-1)">Targeted repair</text>
+			<text x="11" y="245.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,490) scale(1,-1)">Nominate likely errors using models, rare slices</text>
+			<text x="11" y="232.85" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,465) scale(1,-1)">and failed checks. Measure confirmed issues</text>
+			<text x="11" y="220.7" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,441) scale(1,-1)">per reviewed candidate.</text>
+			<rect x="266" y="182" width="238" height="100" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="277" y="262" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,524) scale(1,-1)">Probability audit</text>
+			<text x="277" y="245.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,490) scale(1,-1)">Sample with known probabilities. Estimate</text>
+			<text x="277" y="232.85" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,465) scale(1,-1)">population quality using the release weights.</text>
+			<text x="0" y="152" style="font-family: SansB; font-size: 9px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,304) scale(1,-1)">Stratum</text>
+			<text x="150" y="152" style="font-family: SansB; font-size: 9px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,304) scale(1,-1)">Population</text>
+			<text x="274" y="152" style="font-family: SansB; font-size: 9px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,304) scale(1,-1)">Audit</text>
+			<text x="388" y="152" style="font-family: SansB; font-size: 9px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,304) scale(1,-1)">Error rate</text>
+			<text x="0" y="129" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,258) scale(1,-1)">Ordinary</text>
+			<text x="150" y="129" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,258) scale(1,-1)">8,000 (80%)</text>
+			<text x="274" y="129" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,258) scale(1,-1)">2 / 200</text>
+			<text x="388" y="129" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,258) scale(1,-1)">1%</text>
+			<text x="0" y="107" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,214) scale(1,-1)">Difficult</text>
+			<text x="150" y="107" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,214) scale(1,-1)">2,000 (20%)</text>
+			<text x="274" y="107" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,214) scale(1,-1)">12 / 200</text>
+			<text x="388" y="107" style="font-family: Sans; font-size: 9.5px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,214) scale(1,-1)">6%</text>
+			<path d="M 0,95 L 504,95 Z" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="0" y="73" style="font-family: SansB; font-size: 10px;fill: rgb(65%,27%,29%); stroke:none;" transform="translate(0,146) scale(1,-1)">Naive audit average: 3.5%</text>
+			<text x="0" y="50" style="font-family: SansB; font-size: 10px;fill: rgb(7%,49%,52%); stroke:none;" transform="translate(0,100) scale(1,-1)">Weighted population estimate: 0.8 x 1% + 0.2 x 6% = 2%</text>
+			<text x="0" y="15" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,30) scale(1,-1)">Assumes random within-stratum selection and the stated independent unit.</text>
+		</g>
+	</g>
+</svg>

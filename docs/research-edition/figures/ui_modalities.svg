@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="392" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 392" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="392"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-392)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="378" style="font-family: SansB; font-size: 12px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,756) scale(1,-1)">Different targets need different editors</text>
+			<text x="0" y="361" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,722) scale(1,-1)">Shared save, uncertainty, review, and provenance controls</text>
+			<rect x="382" y="362" width="95.0" height="15" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="389" y="366" style="font-family: SansB; font-size: 8px;fill: rgb(7%,49%,52%); stroke:none;" transform="translate(0,732) scale(1,-1)">PROPOSED INTERFACE</text>
+			<rect x="0" y="190" width="242" height="151" rx="4" ry="4" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="313" width="242" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,17%,23%); fill-rule: evenodd;"/>
+			<text x="10" y="323" style="font-family: SansB; font-size: 9px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,646) scale(1,-1)">VISION  /  caption + mask</text>
+			<rect x="262" y="190" width="242" height="151" rx="4" ry="4" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="262" y="313" width="242" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,17%,23%); fill-rule: evenodd;"/>
+			<text x="272" y="323" style="font-family: SansB; font-size: 9px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,646) scale(1,-1)">TEXT  /  target turn</text>
+			<rect x="0" y="18" width="242" height="151" rx="4" ry="4" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="141" width="242" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,17%,23%); fill-rule: evenodd;"/>
+			<text x="10" y="151" style="font-family: SansB; font-size: 9px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,302) scale(1,-1)">RETRIEVAL  /  relevance</text>
+			<rect x="262" y="18" width="242" height="151" rx="4" ry="4" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="262" y="141" width="242" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,17%,23%); fill-rule: evenodd;"/>
+			<text x="272" y="151" style="font-family: SansB; font-size: 9px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,302) scale(1,-1)">DECISION  /  stable option IDs</text>
+			<rect x="13" y="231" width="89" height="66" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<polygon points="25 240, 91 248, 87 287, 34 280" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.6; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="117" y="282" style="font-family: Sans; font-size: 9px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,564) scale(1,-1)">A blue book...</text>
+			<text x="117" y="264" style="font-family: Sans; font-size: 8px;fill: rgb(7%,49%,52%); stroke:none;" transform="translate(0,528) scale(1,-1)">Count: supported</text>
+			<text x="117" y="247" style="font-family: Sans; font-size: 8px;fill: rgb(72%,41%,16%); stroke:none;" transform="translate(0,494) scale(1,-1)">Color: review</text>
+			<text x="13" y="211" style="font-family: Sans; font-size: 8px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,422) scale(1,-1)">Mask overlay   opacity 50%   holes</text>
+			<rect x="273" y="283" width="219" height="24" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="282" y="292" style="font-family: Sans; font-size: 8.8px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,584) scale(1,-1)">User and source evidence</text>
+			<rect x="273" y="252" width="219" height="24" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="282" y="261" style="font-family: Sans; font-size: 8.8px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,522) scale(1,-1)">Assistant target tokens</text>
+			<rect x="273" y="221" width="219" height="24" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="282" y="230" style="font-family: Sans; font-size: 8.8px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,460) scale(1,-1)">Template revision pinned</text>
+			<text x="13" y="125" style="font-family: SansB; font-size: 8.4px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,250) scale(1,-1)">Query: how is the seal checked?</text>
+			<text x="13" y="99" style="font-family: Sans; font-size: 8.8px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,198) scale(1,-1)">Passage 08</text>
+			<rect x="118" y="95" width="50.0" height="15" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="125" y="99" style="font-family: SansB; font-size: 8px;fill: rgb(7%,49%,52%); stroke:none;" transform="translate(0,198) scale(1,-1)">Relevant</text>
+			<text x="13" y="75" style="font-family: Sans; font-size: 8.8px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,150) scale(1,-1)">Passage 19</text>
+			<rect x="118" y="71" width="72.5" height="15" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="125" y="75" style="font-family: SansB; font-size: 8px;fill: rgb(7%,49%,52%); stroke:none;" transform="translate(0,150) scale(1,-1)">Also relevant</text>
+			<text x="13" y="51" style="font-family: Sans; font-size: 8.8px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,102) scale(1,-1)">Passage 42</text>
+			<rect x="118" y="47" width="54.5" height="15" rx="4" ry="4" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="125" y="51" style="font-family: SansB; font-size: 8px;fill: rgb(72%,41%,16%); stroke:none;" transform="translate(0,102) scale(1,-1)">Uncertain</text>
+			<text x="275" y="125" style="font-family: SansB; font-size: 8.2px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,250) scale(1,-1)">State: substitute is not approved</text>
+			<circle cx="281" cy="95" r="4" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<text x="294" y="92" style="font-family: Sans; font-size: 8.3px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,184) scale(1,-1)">review: Request review</text>
+			<circle cx="281" cy="69" r="4" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="294" y="66" style="font-family: Sans; font-size: 8.3px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,132) scale(1,-1)">ship: Ship substitute</text>
+			<text x="275" y="42" style="font-family: Sans; font-size: 8px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,84) scale(1,-1)">Target ID survives option reordering</text>
+		</g>
+	</g>
+</svg>

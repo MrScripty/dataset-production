@@ -1,0 +1,15 @@
+{
+  "edition": "2026-10-13",
+  "manuscript_sha256": "51164631806008ab2cf9989f902f4b93d12c3d270c4fccbdcf2c5e2af6f4eff4",
+  "pdf_pages": 152,
+  "files": {
+    "dataset-production.pdf": {
+      "bytes": 643729,
+      "sha256": "cacf260fd6058257f2eaeb0ac76485fb8e9e0925f69df29796dec227f393cec1"
+    },
+    "dataset-production-source.zip": {
+      "bytes": 4377018,
+      "sha256": "b35c96c6f8cfae34bb2a9ac63e5094606f59745b5a772b75344aa07a535752a6"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="274" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 274" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="274"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-274)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="260" style="font-family: SansB; font-size: 12px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,520) scale(1,-1)">Shared source, separate supervision</text>
+			<text x="0" y="243" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,486) scale(1,-1)">Proposed data model</text>
+			<rect x="0" y="95" width="130" height="95" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="11" y="170" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,340) scale(1,-1)">Original image</text>
+			<text x="11" y="153.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,306) scale(1,-1)">Preserved bytes</text>
+			<text x="11" y="140.85" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,281) scale(1,-1)">Oriented derivative</text>
+			<text x="11" y="128.7" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,257) scale(1,-1)">Source and rights ID</text>
+			<path d="M 130,142 L 181,218 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="181 218, 176.5645 215.6922, 180.5455 213.0207" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<rect x="181" y="187" width="152" height="66" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="192" y="233" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,466) scale(1,-1)">Class label</text>
+			<text x="192" y="216.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,432) scale(1,-1)">One class per image</text>
+			<path d="M 333,218 L 369,218 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="369 218, 364.6121 220.3971, 364.6121 215.6029" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<rect x="369" y="187" width="135" height="66" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="380" y="233" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,466) scale(1,-1)">Adapter</text>
+			<text x="380" y="216.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,432) scale(1,-1)">Class folder tree</text>
+			<path d="M 130,142 L 181,129 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="181 129, 177.3401 132.4067, 176.1559 127.761" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<rect x="181" y="98" width="152" height="66" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="192" y="144" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,288) scale(1,-1)">Caption</text>
+			<text x="192" y="127.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,254) scale(1,-1)">Visible facts and style</text>
+			<path d="M 333,129 L 369,129 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="369 129, 364.6121 131.3971, 364.6121 126.6029" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<rect x="369" y="98" width="135" height="66" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="380" y="144" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,288) scale(1,-1)">Adapter</text>
+			<text x="380" y="127.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,254) scale(1,-1)">Image + metadata</text>
+			<path d="M 130,142 L 181,40 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="181 40, 181.1817 44.9967, 176.8936 42.85264" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<rect x="181" y="9" width="152" height="66" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="192" y="55" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,110) scale(1,-1)">Corners or mask</text>
+			<text x="192" y="38.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,76) scale(1,-1)">Declared geometry</text>
+			<path d="M 333,40 L 369,40 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1.3;"/>
+			<polygon points="369 40, 364.6121 42.39713, 364.6121 37.60287" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,49%,52%); fill-rule: evenodd;"/>
+			<rect x="369" y="9" width="135" height="66" rx="6" ry="6" style="stroke: rgb(78%,83%,85%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="380" y="55" style="font-family: SansB; font-size: 10px;fill: rgb(9%,17%,23%); stroke:none;" transform="translate(0,110) scale(1,-1)">Adapter</text>
+			<text x="380" y="38.0" style="font-family: Sans; font-size: 9px;fill: rgb(39%,45%,49%); stroke:none;" transform="translate(0,76) scale(1,-1)">Task-specific export</text>
+		</g>
+	</g>
+</svg>
