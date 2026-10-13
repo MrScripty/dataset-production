@@ -66,7 +66,7 @@ def valid_id(value):
 
 def read_records(data):
     """Quarantine each bad physical line; never silently repair or discard it."""
-    accepted, quarantine = [], []
+    accepted, quarantine, counts = [], [], {}
     for line_number, raw in enumerate(data.splitlines(keepends=True), 1):
         provenance = {
             "source_line": line_number,
@@ -78,6 +78,10 @@ def read_records(data):
             row = strict_json(decoded)
             if not isinstance(row, dict):
                 raise ValueError("record must be a JSON object")
+            # Reserve an unambiguous ID even when another field is invalid.
+            # A malformed duplicate must not let its valid twin survive.
+            if valid_id(row.get("id")):
+                counts[row["id"]] = counts.get(row["id"], 0) + 1
             if set(row) != REQUIRED_FIELDS:
                 raise ValueError("fields must be exactly: family_id, id, source_id, text")
             for field in ("id", "source_id", "family_id"):
@@ -94,9 +98,6 @@ def read_records(data):
                              "raw_text_sha256": sha256(raw_text_bytes)})
         except (ValueError, UnicodeError) as exc:
             quarantine.append({**provenance, "reason": str(exc)})
-    counts = {}
-    for row in accepted:
-        counts[row["id"]] = counts.get(row["id"], 0) + 1
     # Quarantine ALL occurrences of a reused ID; picking a first row is order-dependent.
     unique = []
     for row in accepted:
@@ -275,7 +276,10 @@ def build(records_path, gold_path, out, seed=DEFAULT_SEED):
     gold = read_gold(raw_gold, {row["id"] for row in rows})
     audit = audit_release(rows, release, lineage, quarantine, gold)
     recipe = {
-        "version": 2, "seed": seed, "labels": list(LABELS),
+        "version": 3, "seed": seed, "labels": list(LABELS),
+        "record_id_policy": "all strictly decoded objects with a valid unambiguous id reserve that identity; "
+                            "quarantine every accepted occurrence of a reused id even if another occurrence is invalid; "
+                            "undecodable lines and duplicate-key objects have no safely identifiable id",
         "normalization": "Unicode NFKC, casefold, NFKC again, collapse all Unicode whitespace, strip; retain punctuation",
         "unicode_database_version": unicodedata.unidata_version,
         "dedup": "exact equality of normalized text; SHA-256 canonical IDs; all raw lineage retained",
@@ -289,6 +293,7 @@ def build(records_path, gold_path, out, seed=DEFAULT_SEED):
     }
     outputs = {
         "raw/records.jsonl": raw_records,
+        "reference/gold.json": raw_gold,
         "release.jsonl": jsonl_bytes(release), "lineage.jsonl": jsonl_bytes(lineage),
         "quarantine.jsonl": jsonl_bytes(quarantine), "audit.json": json_bytes(audit),
         **{split + ".jsonl": jsonl_bytes([row for row in release if row["split"] == split])
