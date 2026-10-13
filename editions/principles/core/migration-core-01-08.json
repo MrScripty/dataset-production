@@ -1,0 +1,265 @@
+{
+  "author": "Puma",
+  "scope": "Core chapters 1-8 section migration",
+  "source_revision": "416c4b12ad2b9649c2c38bad4d2c7ed5f77eac5f",
+  "entries": [
+    {
+      "source_section": "Delivered chapter 1 opening: one asset, separate task targets, revisions, release and export",
+      "destination": "Core 3: The principle; One source can support several targets; Core 4: Keep distinct objects so corrections can travel",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 1: Separate the target from its measurement",
+      "destination": "Core 2: The theory: a target is not the same as a measurement; Core 7: The principle",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 1: A quality profile rather than one score",
+      "destination": "Core 2: The theory: a target is not the same as a measurement",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 1: Coverage depends on the deployment question",
+      "destination": "Core 2: Three distributions can legitimately differ; Core 8: Stratified sampling needs population weights",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 1: Counts need a unit of independence",
+      "destination": "Core 6: Counting rows does not count new evidence; Core 8: Uncertainty follows the independent observation unit",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 1: Utility is conditional on the experiment",
+      "destination": "Core 2: Choose a baseline and a metric together; full controlled-comparison detail assigned to core 13",
+      "status": "foundation retained; deeper detail handed off",
+      "note": "Full equal-budget/equal-size intervention and subgroup-regression coverage belongs to later evaluation writer, not removed."
+    },
+    {
+      "source_section": "Delivered 2: Annotation introduction and Distinguish five causes of disagreement",
+      "destination": "Core 7: The principle; The theory: disagreement has several causes",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 2: Design a pilot that can expose the guide's weaknesses",
+      "destination": "Core 7: Pilot the guide before scaling the labels",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 2: Match expertise to the decision",
+      "destination": "Core 7: Pilot the guide before scaling the labels",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 2: Agreement is useful but is not truth",
+      "destination": "Core 7: Agreement measures consistency, with assumptions",
+      "status": "retained and rewritten",
+      "note": "Includes 90/100 prevalence example, kappa arithmetic, alpha, geometry/timing and explicit missingness."
+    },
+    {
+      "source_section": "Delivered 2: Preserve disagreement when it is part of the target",
+      "destination": "Core 7: The theory; Missing, conflicting, and resolved references are different states",
+      "status": "retained and rewritten",
+      "note": "Davani et al. primary citation retained without importing benchmark scores into the authored exercise."
+    },
+    {
+      "source_section": "Delivered 3: Keep two review queues",
+      "destination": "Core 8: Random audit and targeted diagnosis answer different questions",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 3: An original stratified audit example",
+      "destination": "Core 8: Stratified sampling needs population weights",
+      "status": "retained and rewritten",
+      "note": "8,000/2,000 strata, 200 each, 2/12 errors, weighted 2%, approximate uncertainty and caveats retained as authored arithmetic."
+    },
+    {
+      "source_section": "Delivered 3: Zero observed errors does not prove zero risk",
+      "destination": "Core 8: No observed errors is not no risk",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 3: Model based label issue detection",
+      "destination": "Core 8: Optional technical review and primary reading",
+      "status": "retained and rewritten",
+      "note": "Conceptual noisy-label assumptions, family-aware out-of-sample scoring, competing causes and source review retained; model fitting stays outside the main exercise."
+    },
+    {
+      "source_section": "Delivered 3: Evaluation labels deserve their own audit",
+      "destination": "Core 8: Optional technical review and primary reading; Core 6: Protect evaluation from the whole production process",
+      "status": "retained and rewritten",
+      "note": "Northcutt benchmark conclusion preserved accurately: ordinary correction/removal did not generally reverse rankings; enhanced-mislabel instability experiment is separate."
+    },
+    {
+      "source_section": "Delivered 4: Permission is multidimensional",
+      "destination": "Core 4: The theory: rights have several dimensions",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 4: A compact canonical model",
+      "destination": "Core 4: Keep distinct objects so corrections can travel; Core 3: One source can support several targets",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 4: Corrections and withdrawal",
+      "destination": "Core 4: Keep distinct objects so corrections can travel",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 5: Choose the independence claim",
+      "destination": "Core 6: The principle; Four holdout questions",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 5: Use connected families when constraints overlap",
+      "destination": "Core 6: A small worked connected-family example; The theory: constraints can overlap transitively",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 5: Deduplication needs several lenses",
+      "destination": "Core 5: Deduplication is evidence, not a universal removal rule; Core 6: Protect evaluation from the whole production process",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Delivered 5: Protect evaluation from the production process",
+      "destination": "Core 6: Protect evaluation from the whole production process",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next first-release: Decide which team should own a request",
+      "destination": "Core 1: A beginner's question; Core 2: A small worked comparison; Core 7: Small worked example",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next first-release: Follow one message from source to example",
+      "destination": "Core 1: Follow the invoice message; Core 4: A small worked source-to-output trace",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next first-release: Keep the cases the rule cannot explain",
+      "destination": "Core 1: Inspect three failures rather than hiding them; Core 8: Worked fixture accounting",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next first-release: Keep learning examples separate from checking examples",
+      "destination": "Core 1: Follow the invoice message; Core 6: A small worked connected-family example",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next first-release: What the finished release contains",
+      "destination": "Core 1: The theory, in ordinary counts; Core 8: Worked fixture accounting",
+      "status": "retained and expanded",
+      "note": "Evidence statuses, source identifiers, raw/canonical/group distinctions and reference cross-table added."
+    },
+    {
+      "source_section": "Next first-release: Optional exercise run the supplied release builder",
+      "destination": "Core 1: Optional CPU reproduction and deeper reading",
+      "status": "retained with obsolete setup removed",
+      "note": "A branch-specific ZIP/download instruction is not carried over: edition-specific delivery setup belongs in updated release instructions; no network/package installation needed in the supplied repository."
+    },
+    {
+      "source_section": "Next extraction-audits: Extract the request rather than the entire page",
+      "destination": "Core 5: Small worked example: find the first wrong representation",
+      "status": "retained and expanded",
+      "note": "Nested negation makes the first incorrect stage visible; navigation/source-role distinction retained."
+    },
+    {
+      "source_section": "Next extraction-audits: Keep three versions for three jobs",
+      "destination": "Core 5: The principle; Normalization deliberately creates equivalence classes; Core 4: A small worked source-to-output trace",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next extraction-audits: Decide whether a match is truly a duplicate",
+      "destination": "Core 5: Two different duplicate problems; Deduplication is evidence, not a universal removal rule",
+      "status": "retained and expanded",
+      "note": "Whole duplicate-ID family quarantine and safely identifiable IDs clarified; near similarity versus task-distinct examples retained."
+    },
+    {
+      "source_section": "Next extraction-audits: Audit a change by checking the source",
+      "destination": "Core 5: Small worked example; Core 8: Random audit and targeted diagnosis answer different questions",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next extraction-audits: Exercise make one defensible cleaning decision",
+      "destination": "Core 5: Controlled exercise: preserve a disputed change",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next extraction-audits: FineWeb2 selective repetition and benchmark-refresh studies",
+      "destination": "Optional text/retrieval or advanced methods research notes",
+      "status": "handoff",
+      "note": "Specialist published examples are omitted from the beginner core to avoid expanding the first extraction lesson; principles of selective deletion and evaluation exposure are retained. Parent should account for these sources in track/reference migration."
+    },
+    {
+      "source_section": "Next physical-systems: A field is a value at each location",
+      "destination": "Core 3: Worked example 3: a four-cell field",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next physical-systems: Make one input and one target",
+      "destination": "Core 3: Worked example 3; Core 6: Four holdout questions and counting related frames",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next physical-systems: Check a representation error before blaming a model",
+      "destination": "Core 3: Worked example 3; Controlled exercise",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next physical-systems: Correct arithmetic is not physical validation",
+      "destination": "Core 3: Verification is narrower than physical validation",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next physical-systems: Exercise repair the four-cell record",
+      "destination": "Core 3: Controlled exercise: repair the contract, then the values",
+      "status": "retained and rewritten",
+      "note": ""
+    },
+    {
+      "source_section": "Next physical-systems: Optional branches after the field example",
+      "destination": "Physical/simulation optional track",
+      "status": "handoff",
+      "note": "Well, CAD/B-rep, DROID and Rheon specialist source/contract coverage is assigned to the track writer. Core retains units/axes/time, trajectory grouping and verification limits; it makes no unverified project result claims."
+    },
+    {
+      "source_section": "Delivered 9/10/11 shared representation and family concepts",
+      "destination": "Core 3: semantic contract and modality comparisons; Core 6: holdout questions",
+      "status": "foundation retained; full specialist material handed off",
+      "note": "All acquisition, annotation, retrieval, preference, audio and vision specialist procedures belong to modality tracks."
+    },
+    {
+      "source_section": "Delivered appendix D measurement worksheet and release review foundations",
+      "destination": "Core 4: Part 1 assessment; Core 8: Part 2 assessment",
+      "status": "retained and expanded",
+      "note": "Preserved full appendices remain separately governed by parent; these assessments add novice worked answers and reviewer gates."
+    }
+  ]
+}

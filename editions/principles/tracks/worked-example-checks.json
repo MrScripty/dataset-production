@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "evidence": "executed arithmetic checks on authored examples only",
+  "checks": [
+    "text missing exception fails sufficient evidence",
+    "text neighboring context supplies scope and exception",
+    "tabular later values reproduce labels but are unavailable features",
+    "tabular baseline coverage is three of four",
+    "tabular conditional agreement is three of three",
+    "vision shifted foreground reaches last column",
+    "vision image-only transform has IoU one third",
+    "vision exclusive maximum reaches width four",
+    "audio half-open interval contains four samples",
+    "audio interval lasts half a second",
+    "audio insertion-only WER is 150 percent",
+    "reasoning exact reduced fraction accepted",
+    "reasoning rejects 2/4",
+    "reasoning rejects 0.5",
+    "reasoning rejects 1/3",
+    "reasoning rejects 1/2 or 2/3",
+    "reasoning rejects The answer is not 1/2.",
+    "reasoning rejects 1/2 because 1 + 1 = 3",
+    "physical four-cell arithmetic target",
+    "physical Kelvin conversion changes numerical value",
+    "physical horizontal face count is six",
+    "modal two-observation gain is three",
+    "mixture equal example target-token proportion",
+    "verifier single accepted precision",
+    "verifier conditional-independent accepted precision"
+  ]
+}

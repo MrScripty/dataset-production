@@ -1,0 +1,456 @@
+{
+  "source_head": "416c4b12ad2b9649c2c38bad4d2c7ed5f77eac5f",
+  "scope": "section-level substantive delivered 7\u201313 and assigned optional branches",
+  "sections": [
+    {
+      "source_chapter": 7,
+      "source_section": "Decide what the mixture weights count",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Compare source balance against the actual objective",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Repetition is neither automatically wasteful nor equivalent to new data",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "A curriculum changes the path through the data",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Data value is a conditional attribution",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "A practical selection experiment",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Match the generation strategy to the gap",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Separate the teacher's jobs",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "A verifier changes the composition of the dataset",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Use several levels of verification",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Process labels and outcome labels answer different questions",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Refinement is a proposal until it is rechecked",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Model judges need calibration and bias checks",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Measure useful diversity",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Recursive replacement and accumulation are different experiments",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "A bounded synthetic production experiment",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Collect variation that could change the decision",
+      "destination_files": [
+        "tracks/03-vision-video.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Choose annotation units before choosing drawing tools",
+      "destination_files": [
+        "tracks/03-vision-video.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Simulation provides known scene state",
+      "destination_files": [
+        "tracks/03-vision-video.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Domain randomization is a transfer hypothesis",
+      "destination_files": [
+        "tracks/03-vision-video.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Model assisted masks need temporal quality checks",
+      "destination_files": [
+        "tracks/03-vision-video.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Captions for image generation",
+      "destination_files": [
+        "tracks/03-vision-video.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Distinguish the stages",
+      "destination_files": [
+        "tracks/04-audio.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Segment with the target in mind",
+      "destination_files": [
+        "tracks/04-audio.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Decide what the transcript represents",
+      "destination_files": [
+        "tracks/04-audio.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Diversity and split design need more than speaker count",
+      "destination_files": [
+        "tracks/04-audio.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Recognition and generation need distinct release gates",
+      "destination_files": [
+        "tracks/04-audio.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Read the applicable subset terms",
+      "destination_files": [
+        "tracks/04-audio.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Documents conversations and preferences are different units",
+      "destination_files": [
+        "tracks/01-text-retrieval.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Retrieval supervision and negative mining",
+      "destination_files": [
+        "tracks/01-text-retrieval.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Preference judgments and pair construction",
+      "destination_files": [
+        "tracks/01-text-retrieval.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Tool trajectories require an environment contract",
+      "destination_files": [
+        "tracks/05-reasoning-trajectories.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Preserve failures that teach the right lesson",
+      "destination_files": [
+        "tracks/05-reasoning-trajectories.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Build a failure record that supports comparison",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Slices turn averages into questions",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Automated slice discovery is a hypothesis generator",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Training dynamics reveal different kinds of difficulty",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Influence asks which training changes might matter",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Test a proposed repair with an explicit intervention",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Distribution shift changes what an evaluation means",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Some failures are underdetermined by the training objective",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Close the loop without contaminating the final test",
+      "destination_files": [
+        "tracks/advanced-methods.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 1 DCLM makes data selection the experimental variable",
+      "destination_files": [
+        "cases/03-published-production-systems.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 2 FineWeb Edu distills an expensive judgment into a cheap filter",
+      "destination_files": [
+        "cases/03-published-production-systems.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 3 T\u00fclu 3 builds supervision for successive training stages",
+      "destination_files": [
+        "cases/03-published-production-systems.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 4 SAM 2 improves both annotations and the annotation process",
+      "destination_files": [
+        "cases/03-published-production-systems.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 5 Granary repairs boundaries and pseudo labels together",
+      "destination_files": [
+        "cases/03-published-production-systems.md"
+      ],
+      "status": "retained substantive coverage"
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "A comparison framework worth keeping",
+      "destination_files": [
+        "cases/03-published-production-systems.md"
+      ],
+      "status": "retained substantive coverage"
+    }
+  ],
+  "figures": [
+    {
+      "source_chapter": 7,
+      "caption": "Rows tokens and supervised targets imply different mixtures",
+      "historical_asset": "figures/exposure.png",
+      "status": "not re-embedded in these track files; explanatory mechanism preserved in worked prose and original authored examples",
+      "reason": "avoid stale relative figure paths and repeated diagram introductions; original historical edition retains its asset"
+    },
+    {
+      "source_chapter": 8,
+      "caption": "A verifier can accept many wrong examples when the base error rate is high",
+      "historical_asset": "figures/verifier.png",
+      "status": "not re-embedded in these track files; explanatory mechanism preserved in worked prose and original authored examples",
+      "reason": "avoid stale relative figure paths and repeated diagram introductions; original historical edition retains its asset"
+    },
+    {
+      "source_chapter": 8,
+      "caption": "Candidate production and acceptance remain separate stages",
+      "historical_asset": "figures/synthetic.png",
+      "status": "not re-embedded in these track files; explanatory mechanism preserved in worked prose and original authored examples",
+      "reason": "avoid stale relative figure paths and repeated diagram introductions; original historical edition retains its asset"
+    },
+    {
+      "source_chapter": 10,
+      "caption": "Recording identity segment boundaries and canonical audio remain linked",
+      "historical_asset": "figures/audio.png",
+      "status": "not re-embedded in these track files; explanatory mechanism preserved in worked prose and original authored examples",
+      "reason": "avoid stale relative figure paths and repeated diagram introductions; original historical edition retains its asset"
+    },
+    {
+      "source_chapter": 11,
+      "caption": "A trajectory may produce several supervised prefixes without splitting its family",
+      "historical_asset": "figures/trajectory.png",
+      "status": "not re-embedded in these track files; explanatory mechanism preserved in worked prose and original authored examples",
+      "reason": "avoid stale relative figure paths and repeated diagram introductions; original historical edition retains its asset"
+    },
+    {
+      "source_chapter": 12,
+      "caption": "A repair experiment separates targeted intervention from removal and budget effects",
+      "historical_asset": "figures/repair.png",
+      "status": "not re-embedded in these track files; explanatory mechanism preserved in worked prose and original authored examples",
+      "reason": "avoid stale relative figure paths and repeated diagram introductions; original historical edition retains its asset"
+    }
+  ],
+  "additional_migration": [
+    {
+      "source": "next physical-systems",
+      "destination": "tracks/06-physical-fields-simulation.md",
+      "disposition": "four-cell worked example and optional scientific/geometry/robotic concepts retained; outdated future Rheon paragraph replaced by actual source-pinned case"
+    },
+    {
+      "source": "next reasoning-trajectories",
+      "destination": "tracks/05-reasoning-trajectories.md",
+      "disposition": "fraction and two-step navigation examples, verifier scope, DAgger, OpenThoughts and Big-Math distinction retained; unverified current-access assertions replaced by exact-revision acquisition requirement"
+    },
+    {
+      "source": "delivered 16",
+      "destination": "cases/02-tuldok.md and cases/90-versioned-product-appendix.md",
+      "disposition": "historical corner-studio implementation remains historical; general proposed screens stay proposed; obsolete capability boundaries replaced by current pinned source/consumer/restore evidence"
+    },
+    {
+      "source": "delivered references R13\u2013R57 and public tools",
+      "destination": "preserved historical bibliography in assembled edition",
+      "disposition": "inline original reference IDs retained; duplicate bibliographies removed from tracks/cases"
+    }
+  ]
+}

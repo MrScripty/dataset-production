@@ -3,7 +3,7 @@
   "status": "initial next-edition draft",
   "date": "2026-10-11",
   "base_commit": "93613d638d6c6bb05c997b55033234a6147b63c3",
-  "retained_source": "docs/book/manuscript.md",
+  "retained_source": "editions/research-2026-10-02/manuscript.md",
   "chapters": [
     {
       "segments": [
