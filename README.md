@@ -11,6 +11,10 @@ A public fieldbook and interactive dataset-production workbench, built as a depe
 
 The site contains no backend, analytics tracker, provider calls, user accounts, or private datasets. Lab state is stored in the visitor’s browser and can be reset or exported. No actual Tuldok repository changes are implied.
 
+## Next edition in development
+
+The [beginner-to-practical draft](editions/next/README.md) starts with a supplied, CPU-only release lab and adds researched methods for weak and semi-supervised labels, augmentation, operational cleaning, verifiable reasoning, physical data and release monitoring. It is separate from the delivered reader and downloads. Start with the [reader journey and acquisition paths](editions/next/progression.md).
+
 ## Local development
 
 Requirements: Node.js 20+ for unit tests; Python 3 for serving and rendering; Pandoc only when rebuilding book HTML.

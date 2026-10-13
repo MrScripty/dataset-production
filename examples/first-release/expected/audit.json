@@ -1,0 +1,118 @@
+{
+  "caveat": "Tiny authored teaching fixture; these are descriptive checks, not evidence of generalization. Rules are fixed heuristics, not a learned label model. Gold is evaluation-only. Aggregate accuracy excludes aggregate abstentions/conflicts. Per-rule accuracy scores each rule's non-abstaining votes. All accuracy denominators exclude unresolved/missing gold; inspect them.",
+  "counts": {
+    "accepted_raw_records": 28,
+    "canonical_examples": 24,
+    "duplicate_records_collapsed": 4,
+    "input_lines": 30,
+    "leakage_groups": 21,
+    "quarantined_lines": 2
+  },
+  "gold": {
+    "annotated_raw_records": 26,
+    "conflicting_canonical_examples": 1,
+    "conflicts": [
+      {
+        "annotations": [
+          {
+            "label": "billing",
+            "record_id": "r27"
+          },
+          {
+            "label": "technical",
+            "record_id": "r28"
+          }
+        ],
+        "canonical_id": "ex-393c61456ddc8a8b8b7956b883e1bb969b7d61703d97830e2c0c6b5b0591f1b2"
+      }
+    ],
+    "missing_canonical_examples": 2,
+    "resolved_canonical_examples": 21
+  },
+  "per_rule": {
+    "access_terms": {
+      "accuracy": 0.5714285714285714,
+      "correct": 4,
+      "coverage": {
+        "coverage": 0.2916666666666667,
+        "eligible_examples": 24,
+        "voted_examples": 7
+      },
+      "evaluated_predictions": 7,
+      "label": "access",
+      "regex": "\\b(password|login|locked)\\b"
+    },
+    "billing_terms": {
+      "accuracy": 0.5,
+      "correct": 4,
+      "coverage": {
+        "coverage": 0.375,
+        "eligible_examples": 24,
+        "voted_examples": 9
+      },
+      "evaluated_predictions": 8,
+      "label": "billing",
+      "regex": "\\b(invoice|refund|charge|payment)\\b"
+    },
+    "failure_terms": {
+      "accuracy": 0.875,
+      "correct": 7,
+      "coverage": {
+        "coverage": 0.3333333333333333,
+        "eligible_examples": 24,
+        "voted_examples": 8
+      },
+      "evaluated_predictions": 8,
+      "label": "technical",
+      "regex": "\\b(crash|crashes|error|frozen)\\b"
+    }
+  },
+  "splits": {
+    "dev": {
+      "accuracy": 1.0,
+      "canonical_examples": 5,
+      "correct": 3,
+      "evaluated_predictions": 3,
+      "leakage_groups": 4
+    },
+    "test": {
+      "accuracy": 1.0,
+      "canonical_examples": 7,
+      "correct": 4,
+      "evaluated_predictions": 4,
+      "leakage_groups": 5
+    },
+    "train": {
+      "accuracy": 0.5,
+      "canonical_examples": 12,
+      "correct": 3,
+      "evaluated_predictions": 6,
+      "leakage_groups": 12
+    }
+  },
+  "weak_labels": {
+    "abstain": 5,
+    "accuracy": 0.7692307692307693,
+    "conflict": 5,
+    "correct": 10,
+    "errors": [
+      {
+        "canonical_id": "ex-4b3ace530b371efce21b6d78063351a55627997c6c6c98a4c7f95efdee5e9735",
+        "gold": "technical",
+        "prediction": "access"
+      },
+      {
+        "canonical_id": "ex-9a630da1e4147bbcac511a12a5b6a7bd7289a624fefeff1a756a4512dd29123e",
+        "gold": "technical",
+        "prediction": "billing"
+      },
+      {
+        "canonical_id": "ex-c166a31bfa6148b295c67c7f4307401ae1aa2b340bd199199118ef652a67527c",
+        "gold": "technical",
+        "prediction": "billing"
+      }
+    ],
+    "evaluated_predictions": 13,
+    "labeled": 14
+  }
+}
