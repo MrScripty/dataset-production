@@ -179,7 +179,7 @@ def reader_checks(browser, page, expect):
 def lab_checks(page, expect, Image):
     visit(page)
     page.get_by_role('heading', name='Better models start with better evidence.').wait_for()
-    expect(page.locator('.meta-row')).to_contain_text('Principles-first edition / 13 Oct 2026')
+    expect(page.locator('.hero .meta-row')).to_contain_text('Principles-first edition / 13 Oct 2026')
     capture(page, 'home-desktop', full_page=True)
     ok('Landing page rendered')
     visit(page, '#geometry')
