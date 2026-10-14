@@ -1,0 +1,50 @@
+{
+  "title": "Dataset Production",
+  "author": "Puma",
+  "edition": "2026-10-13",
+  "label": "Principles-first edition",
+  "source_base_commit": "ac62387a3a9760e3f1e9f8b8290552cb2dc13471",
+  "chapters": 15,
+  "tracks": 6,
+  "appendices": 4,
+  "parts": [
+    {
+      "title": "A first useful release",
+      "first": 1,
+      "last": 4
+    },
+    {
+      "title": "Evidence you can trust",
+      "first": 5,
+      "last": 8
+    },
+    {
+      "title": "Controlled improvement",
+      "first": 9,
+      "last": 12
+    },
+    {
+      "title": "A release others can use",
+      "first": 13,
+      "last": 15
+    }
+  ],
+  "chapter_ids": [
+    "inspect-release",
+    "question-claim",
+    "data-contract",
+    "sources-origin",
+    "extraction-evidence",
+    "independence-evaluation",
+    "labels-measurements",
+    "audit-baseline",
+    "useful-examples",
+    "valid-transformations",
+    "uncertain-supervision",
+    "generate-verify",
+    "evaluate-diagnose",
+    "freeze-consumer",
+    "operate-recover-cost"
+  ],
+  "pdf_pages": 152
+}

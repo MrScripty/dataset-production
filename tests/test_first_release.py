@@ -139,6 +139,33 @@ class FirstReleaseTests(unittest.TestCase):
             self.assertEqual(len(quarantined), 2)
             self.assertTrue(all(row["reason"] == "duplicate record id: collision" for row in quarantined))
 
+    def test_invalid_duplicate_reserves_unambiguous_id_in_both_orders(self):
+        examples = [self.record("collision", "valid text"),
+                    self.record("good", "another valid text"),
+                    {**self.record("collision", "bad text"), "extra": True}]
+        for ordering in (examples, list(reversed(examples))):
+            accepted, quarantined = lab.read_records(lab.jsonl_bytes(ordering))
+            self.assertEqual([row["id"] for row in accepted], ["good"])
+            self.assertEqual(len(quarantined), 2)
+            self.assertEqual(sum(row["reason"] == "duplicate record id: collision"
+                                 for row in quarantined), 1)
+            self.assertEqual(sorted(row["source_line"] for row in accepted + quarantined), [1, 2, 3])
+
+    def test_duplicate_key_object_does_not_guess_record_identity(self):
+        data = lab.jsonl_bytes([self.record("collision", "valid text")])
+        data += b'{"id":"collision","id":"ambiguous","text":"bad"}\n'
+        accepted, quarantined = lab.read_records(data)
+        self.assertEqual([row["id"] for row in accepted], ["collision"])
+        self.assertEqual(len(quarantined), 1)
+        self.assertIn("duplicate JSON key", quarantined[0]["reason"])
+
+    def test_reference_input_is_retained_for_exact_audit_reproduction(self):
+        out = self.build_fixture()
+        raw = (LAB / "data/gold.json").read_bytes()
+        self.assertEqual((out / "reference/gold.json").read_bytes(), raw)
+        manifest = json.loads((out / "manifest.json").read_text())
+        self.assertEqual(manifest["outputs"]["reference/gold.json"]["sha256"], hashlib.sha256(raw).hexdigest())
+
     def test_full_raw_preservation_and_lineage(self):
         out = self.build_fixture()
         source_bytes = (LAB / "data" / "records.jsonl").read_bytes()
@@ -288,7 +315,7 @@ class FirstReleaseTests(unittest.TestCase):
                              ("gold.json", LAB / "data" / "gold.json"), ("build.py", LAB / "build.py")):
             self.assertEqual(manifest["inputs"][name]["sha256"], hashlib.sha256(source.read_bytes()).hexdigest())
         self.assertEqual(manifest["recipe"]["seed"], lab.DEFAULT_SEED)
-        self.assertEqual(manifest["recipe"]["version"], 2)
+        self.assertEqual(manifest["recipe"]["version"], 3)
         self.assertIn("NFKC, casefold, NFKC again", manifest["recipe"]["normalization"])
 
     def test_rule_coverage_and_accuracy_counts_are_measured(self):

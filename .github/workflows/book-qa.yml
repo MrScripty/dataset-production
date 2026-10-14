@@ -1,0 +1,123 @@
+name: Book and lab browser qualification
+
+# Test PR head bytes only. This workflow never deploys or merges.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: book-qa-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  qualify:
+    name: Static, CPU and sandboxed Chromium checks
+    # Ubuntu 22.04 supports Playwright and ordinary non-root Chromium sandboxing.
+    # Do not disable sandbox/user-namespace security to make a failing launch pass.
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash
+    env:
+      SITE_URL: http://127.0.0.1:8094/
+      BOOK_QA_COMMIT: ${{ github.event.pull_request.head.sha }}
+      PYTHONDONTWRITEBYTECODE: '1'
+
+    steps:
+      - name: Check out exact PR head without retained credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Initialize evidence receipt
+        run: |
+          mkdir -p qa-output
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          Path('qa-output/browser-results.json').write_text(json.dumps({
+              'status': 'not-run', 'commit': os.environ['BOOK_QA_COMMIT'],
+              'reason': 'Browser prerequisites or server did not complete; see workflow logs.',
+              'screenshots': [], 'visual_review': 'Still required after a successful browser run.'
+          }, indent=2) + '\n')
+          PY
+          test "$(git rev-parse HEAD)" = "$BOOK_QA_COMMIT"
+          git rev-parse HEAD | tee qa-output/checked-out-commit.txt
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Install official test dependencies and maintained Chromium
+        id: dependencies
+        run: |
+          set -o pipefail
+          sudo apt-get update
+          sudo apt-get install --yes pandoc
+          # Playwright's browser revision follows this exact Python release.
+          python -m pip install 'playwright==1.63.0' 'Pillow>=11,<13'
+          python -m playwright install --with-deps chromium
+          python -m pip freeze | tee qa-output/python-dependencies.txt
+          pandoc --version | tee qa-output/pandoc-version.txt
+          node --version | tee qa-output/node-version.txt
+
+      - name: Run static, npm and CPU fixture checks
+        id: static
+        run: |
+          set -o pipefail
+          # package.json has no npm dependencies; npm test uses Node's own runner.
+          # Check existing release artifacts. Do not regenerate reviewed docs/PDF.
+          npm run check 2>&1 | tee qa-output/static-cpu-results.log
+
+      - name: Serve exact checked-out docs on loopback
+        id: server
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+        run: |
+          python -m http.server 8094 --bind 127.0.0.1 --directory docs > qa-output/server.log 2>&1 &
+          echo "$!" > "$RUNNER_TEMP/book-qa-server.pid"
+          python - <<'PY'
+          import os, time, urllib.request
+          for attempt in range(60):
+              try:
+                  with urllib.request.urlopen(os.environ['SITE_URL'] + 'book/', timeout=2) as response:
+                      if response.status == 200:
+                          break
+              except OSError:
+                  time.sleep(0.5)
+          else:
+              raise SystemExit('Loopback docs server did not become ready')
+          PY
+
+      - name: Qualify desktop, narrow viewports, keyboard and cancellation
+        if: ${{ !cancelled() && steps.server.outcome == 'success' }}
+        run: |
+          set -o pipefail
+          python -u tests/browser_qa.py 2>&1 | tee qa-output/browser-run.log
+
+      - name: Stop loopback server
+        if: ${{ always() }}
+        run: |
+          if test -f "$RUNNER_TEMP/book-qa-server.pid"; then
+            kill "$(cat "$RUNNER_TEMP/book-qa-server.pid")" || true
+          fi
+
+      - name: Upload receipts, screenshots and failure diagnostics
+        if: ${{ always() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: book-browser-qa-${{ github.event.pull_request.head.sha }}
+          path: qa-output/
+          if-no-files-found: warn
+          retention-days: 14

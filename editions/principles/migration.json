@@ -1,0 +1,1232 @@
+{
+  "source_edition": "research-2026-10-02",
+  "source_blob": "8f10a4bc9adc5325974fa0e3cdba1a97127d3fdf",
+  "source_sha256": "81d59106d3e3eea9b438125f51e39bc0b1c27cac916b8bf980fd9f372b0718fa",
+  "edition": "principles-first-2026-10-13",
+  "policy": "Section ledger records destination and editorial action; exact prior edition is preserved. Published findings, authored arithmetic and source observations keep their original status. No invented fresh experiment follows from reordering.",
+  "sections": [
+    {
+      "source_chapter": 1,
+      "source_section": "Define and measure the training claim \u2014 opening",
+      "source_section_sha256": "78b760a4e506acff636e154b83219bf101482019c5945209163dc9196373fe10",
+      "destinations": [
+        "chapter-question-claim",
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reframe claim/measurement foundations as beginner decisions; retain cost/coverage distinctions."
+    },
+    {
+      "source_chapter": 1,
+      "source_section": "Separate the target from its measurement",
+      "source_section_sha256": "067c214f81038e42f386e9e9f8c11f6551247b4c3dbdfdc180b2c5c6c378ce74",
+      "destinations": [
+        "chapter-question-claim",
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reframe claim/measurement foundations as beginner decisions; retain cost/coverage distinctions."
+    },
+    {
+      "source_chapter": 1,
+      "source_section": "A quality profile rather than one score",
+      "source_section_sha256": "4c373946e60076e8068f3ff8170ff5c63da2b2dd5960f147f5d2aaabbe92e609",
+      "destinations": [
+        "chapter-question-claim",
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reframe claim/measurement foundations as beginner decisions; retain cost/coverage distinctions."
+    },
+    {
+      "source_chapter": 1,
+      "source_section": "Coverage depends on the deployment question",
+      "source_section_sha256": "52ba01eb16f5a2d85aecc0212f728fd0c4b5c585fc43f4cca6aaa0116bf68af0",
+      "destinations": [
+        "chapter-question-claim",
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reframe claim/measurement foundations as beginner decisions; retain cost/coverage distinctions."
+    },
+    {
+      "source_chapter": 1,
+      "source_section": "Counts need a unit of independence",
+      "source_section_sha256": "b090b65a9838a215ebe2c0884f8c0c96f6e1e7601eb2e003a4f643d98b041fba",
+      "destinations": [
+        "chapter-question-claim",
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reframe claim/measurement foundations as beginner decisions; retain cost/coverage distinctions."
+    },
+    {
+      "source_chapter": 1,
+      "source_section": "Utility is conditional on the experiment",
+      "source_section_sha256": "a1d6b76c893ecba7a4306e83b3d3d7617988b2224445492117c31674be834fc6",
+      "destinations": [
+        "chapter-question-claim",
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reframe claim/measurement foundations as beginner decisions; retain cost/coverage distinctions."
+    },
+    {
+      "source_chapter": 2,
+      "source_section": "Annotation as a measurement process \u2014 opening",
+      "source_section_sha256": "7fa0c555a709a877496b85e367ef631210814d5af03da9ca3891c7ca09c62ecb",
+      "destinations": [
+        "chapter-labels-measurements"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Preserve measurement, guide piloting, expertise, agreement limits and unresolved judgments."
+    },
+    {
+      "source_chapter": 2,
+      "source_section": "Distinguish five causes of disagreement",
+      "source_section_sha256": "61e47b07fdc3963c027f05ebaec75e01e74e6e8e07613a82d4bdc10cfd4e8ed9",
+      "destinations": [
+        "chapter-labels-measurements"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Preserve measurement, guide piloting, expertise, agreement limits and unresolved judgments."
+    },
+    {
+      "source_chapter": 2,
+      "source_section": "Design a pilot that can expose the guide's weaknesses",
+      "source_section_sha256": "8ed6d829622afff225d6556b6389e4f441951de4c09a132e0410c6ace04eafc1",
+      "destinations": [
+        "chapter-labels-measurements"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Preserve measurement, guide piloting, expertise, agreement limits and unresolved judgments."
+    },
+    {
+      "source_chapter": 2,
+      "source_section": "Match expertise to the decision",
+      "source_section_sha256": "8a3982eec33ec50abb2ae51d3517da3997a09337402c4b4b74f9ad546fddace2",
+      "destinations": [
+        "chapter-labels-measurements"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Preserve measurement, guide piloting, expertise, agreement limits and unresolved judgments."
+    },
+    {
+      "source_chapter": 2,
+      "source_section": "Agreement is useful but is not truth",
+      "source_section_sha256": "bf469fb67c84629bb854da5f2c9a7a7084cf83aa7b0e73d7c2930b427cb6be52",
+      "destinations": [
+        "chapter-labels-measurements"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Preserve measurement, guide piloting, expertise, agreement limits and unresolved judgments."
+    },
+    {
+      "source_chapter": 2,
+      "source_section": "Preserve disagreement when it is part of the target",
+      "source_section_sha256": "db80e2481bf14d1282b41df20b20c483d58b20436a371e66765252af1ef5e570",
+      "destinations": [
+        "chapter-labels-measurements"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Preserve measurement, guide piloting, expertise, agreement limits and unresolved judgments."
+    },
+    {
+      "source_chapter": 3,
+      "source_section": "Audit labels and estimate uncertainty \u2014 opening",
+      "source_section_sha256": "49321c6221c0cbe2f03a64ccb3f2623815a12cc77dea91c714ccdd41347e2a90",
+      "destinations": [
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep random/targeted queues, denominator and uncertainty examples, published issue-detection methods."
+    },
+    {
+      "source_chapter": 3,
+      "source_section": "Keep two review queues",
+      "source_section_sha256": "eb1a31a46d828c506560e507bb01ff70e4da81dea5a606e6dff2320d1ce38161",
+      "destinations": [
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep random/targeted queues, denominator and uncertainty examples, published issue-detection methods."
+    },
+    {
+      "source_chapter": 3,
+      "source_section": "An original stratified audit example",
+      "source_section_sha256": "0527abf48892748bb2183eccbc20fc0037cf5d3fd1c39efbafedb8656b3ab514",
+      "destinations": [
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep random/targeted queues, denominator and uncertainty examples, published issue-detection methods."
+    },
+    {
+      "source_chapter": 3,
+      "source_section": "Zero observed errors does not prove zero risk",
+      "source_section_sha256": "3629c2a5a7d1ca0869ff61ee62425c4bff1b9ff28cb11c10b96542374e96e5cd",
+      "destinations": [
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep random/targeted queues, denominator and uncertainty examples, published issue-detection methods."
+    },
+    {
+      "source_chapter": 3,
+      "source_section": "Model based label issue detection",
+      "source_section_sha256": "83b25c45365e419721542a870a47b784b80beb2697888fe2e9e213b0aac9d70e",
+      "destinations": [
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep random/targeted queues, denominator and uncertainty examples, published issue-detection methods."
+    },
+    {
+      "source_chapter": 3,
+      "source_section": "Evaluation labels deserve their own audit",
+      "source_section_sha256": "ebc045ddc65b08a7bac5ae7b6fe8a205768b6528bf1ea81723b0a0982d63bdd1",
+      "destinations": [
+        "chapter-audit-baseline"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep random/targeted queues, denominator and uncertainty examples, published issue-detection methods."
+    },
+    {
+      "source_chapter": 4,
+      "source_section": "Permission is multidimensional",
+      "source_section_sha256": "2c96e151ebbc7fc3b55a3b941f57908a16efd927aadd9b3eb78f5321368d687e",
+      "destinations": [
+        "chapter-sources-origin"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep permission dimensions, canonical lineage and correction/withdrawal scope."
+    },
+    {
+      "source_chapter": 4,
+      "source_section": "A compact canonical model",
+      "source_section_sha256": "82bda4d514eee9f72bdfdc8f0e7815c828e0147f8eecd47fdbb186a52bb59905",
+      "destinations": [
+        "chapter-sources-origin"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep permission dimensions, canonical lineage and correction/withdrawal scope."
+    },
+    {
+      "source_chapter": 4,
+      "source_section": "Corrections and withdrawal",
+      "source_section_sha256": "3ccf3b5e740da08af0be37c55dfe884b934dd4002479ce61e572d904c3e75fa0",
+      "destinations": [
+        "chapter-sources-origin"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep permission dimensions, canonical lineage and correction/withdrawal scope."
+    },
+    {
+      "source_chapter": 5,
+      "source_section": "Choose the independence claim",
+      "source_section_sha256": "a12c276ce9275ee298dde1298cb77834f53c5c1f47d20bca9073b88b552667b3",
+      "destinations": [
+        "chapter-extraction-evidence",
+        "chapter-independence-evaluation"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Separate meaning-preserving extraction from transitive family grouping and exposure."
+    },
+    {
+      "source_chapter": 5,
+      "source_section": "Use connected families when constraints overlap",
+      "source_section_sha256": "e80b4b36278a9131c2f932197aa2958216dfa1f0db1930250886ce6bca2560de",
+      "destinations": [
+        "chapter-extraction-evidence",
+        "chapter-independence-evaluation"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Separate meaning-preserving extraction from transitive family grouping and exposure."
+    },
+    {
+      "source_chapter": 5,
+      "source_section": "Deduplication needs several lenses",
+      "source_section_sha256": "863f8b9d92cf9e2cbb11804f0f2fec35304bc56506ec0f203bd0220dbd6daed1",
+      "destinations": [
+        "chapter-extraction-evidence",
+        "chapter-independence-evaluation"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Separate meaning-preserving extraction from transitive family grouping and exposure."
+    },
+    {
+      "source_chapter": 5,
+      "source_section": "Protect evaluation from the production process",
+      "source_section_sha256": "097b8b8a21da947f86cd053f5362d2d651650f0c395465a47fc87b2ee68770bb",
+      "destinations": [
+        "chapter-extraction-evidence",
+        "chapter-independence-evaluation"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Separate meaning-preserving extraction from transitive family grouping and exposure."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Select the next useful examples \u2014 opening",
+      "source_section_sha256": "3868b4db9c98f198761f036426b3f96c97427b9521bf85da0677ee312e5de71e",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach selection budget/mechanism first; retain specialist algorithms as advanced notes."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Begin with a baseline that can be beaten",
+      "source_section_sha256": "39c6a547f13eef0e67b0dbc9fdfe1a61a907322b8c7743c232c56f78aa200f1a",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach selection budget/mechanism first; retain specialist algorithms as advanced notes."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Uncertainty asks where the current model hesitates",
+      "source_section_sha256": "724ca9ec53e41c6cf8609be3774dcf7d505015764a27566c75bb978bacb4e0a0",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach selection budget/mechanism first; retain specialist algorithms as advanced notes."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Diversity asks what the batch adds collectively",
+      "source_section_sha256": "09e07862807028b5cd098a8acc0a5229c8547fb9098becd83aad87f43b626bda",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach selection budget/mechanism first; retain specialist algorithms as advanced notes."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Hard examples and hard negatives need verification",
+      "source_section_sha256": "171d5df2741e70b8b346d07194a2f3b56b5ea2da3289423ab811c04f17a57ec7",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach selection budget/mechanism first; retain specialist algorithms as advanced notes."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Selection for evaluation is a different problem",
+      "source_section_sha256": "85113d7f20c7df285dd217fae5d53b26c270c2a9e44bd8f31c6ae2e1ac96597d",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach selection budget/mechanism first; retain specialist algorithms as advanced notes."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Mixtures curricula and data value \u2014 opening",
+      "source_section_sha256": "cc423beb17f0e0e42fb96337dab927d60fd1f4a536b26d94c939ffe748c06d3f",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Introduce mixtures in acquisition; retain DoReMi, influence and conditional utility beyond core."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Decide what the mixture weights count",
+      "source_section_sha256": "90374f61665df08a35a8d76cf0dcf1046de4da9d3cee6d283d765bab02f41082",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Introduce mixtures in acquisition; retain DoReMi, influence and conditional utility beyond core."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Compare source balance against the actual objective",
+      "source_section_sha256": "53319e867da913105a78b9e618c1c7c995410d4019b20eb7e4c9487f0592607c",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Introduce mixtures in acquisition; retain DoReMi, influence and conditional utility beyond core."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Repetition is neither automatically wasteful nor equivalent to new data",
+      "source_section_sha256": "ab932856a98dc49765ff692e9101bf3c30cc03af64d8d1f5f47f861f82ac132e",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Introduce mixtures in acquisition; retain DoReMi, influence and conditional utility beyond core."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "A curriculum changes the path through the data",
+      "source_section_sha256": "66b957674711d4e2aaae38eb3b52b06c12f3e68dc6d44b925111a3cc96142458",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Introduce mixtures in acquisition; retain DoReMi, influence and conditional utility beyond core."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Data value is a conditional attribution",
+      "source_section_sha256": "2d36ee18241085e7c838bc7aa3c1507b5495b60268c936b93c770bfb17a6ec58",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Introduce mixtures in acquisition; retain DoReMi, influence and conditional utility beyond core."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "A practical selection experiment",
+      "source_section_sha256": "e92542b0c47e7f63aced70ef0100420cf891cfff79d5a55f9bffc0b1a2bf98ec",
+      "destinations": [
+        "chapter-useful-examples",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Introduce mixtures in acquisition; retain DoReMi, influence and conditional utility beyond core."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Generate verify and refine synthetic data \u2014 opening",
+      "source_section_sha256": "4eb5391f151faac98a2a83a24739532a1fdb2af200d62f1d493b24425906634a",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Match the generation strategy to the gap",
+      "source_section_sha256": "73f1d8acb008a186200004080d520d4086ecd381392bb864daf608159550c22a",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Separate the teacher's jobs",
+      "source_section_sha256": "a7d0fc771a3a0c3e1419fbf28df77db77901448e21876ddd77b05089443056b5",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "A verifier changes the composition of the dataset",
+      "source_section_sha256": "1d80a403961222868958dea3b103998b683d7844f4d86eeda0070a9659532e32",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Use several levels of verification",
+      "source_section_sha256": "7c34436c64336bda5e1cec488614862ea6c2364e3d36879d7677297cb1670b15",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Process labels and outcome labels answer different questions",
+      "source_section_sha256": "00800505606c3f0bd868b0fb36b7ff148ef99d4648cdcc466a7f8d63678c5c74",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Refinement is a proposal until it is rechecked",
+      "source_section_sha256": "0a8e7d5663c917cda44505732517d9d040a413d0119e641e8221bdd89f40dcde",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Model judges need calibration and bias checks",
+      "source_section_sha256": "1b22124e7384af3f93d957abde369ad92ab9c5ddf5649ff2df91c3bafe7cf32f",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Measure useful diversity",
+      "source_section_sha256": "202849a4e4c22f78920784ccd461738186b6f74c68fd766940b08aa6710b72b4",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Recursive replacement and accumulation are different experiments",
+      "source_section_sha256": "3065249353447408082c7f986fa3322621b12d3bb1e761c7992c05b439ea3913",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "A bounded synthetic production experiment",
+      "source_section_sha256": "29282ea6bebe8a297010529089a1786d788d2a9643e81b236f0f4f75127050e0",
+      "destinations": [
+        "chapter-generate-verify",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Explain candidate/verifier/acceptance boundary first; retain specialist synthesis distinctions."
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Vision capture simulation and temporal annotation \u2014 opening",
+      "source_section_sha256": "03fc62afdbbdada2d6343d51ab3885b606fb478fa834d22bd65221b19e86b3e2",
+      "destinations": [
+        "track-03-vision-video"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse substantive geometry, mask/occlusion, coordinate, tracking and rights contracts."
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Collect variation that could change the decision",
+      "source_section_sha256": "f5ce97025692f27afcab37a8af92e772e7f0fbbdbaa8998c477b3babff8ef993",
+      "destinations": [
+        "track-03-vision-video"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse substantive geometry, mask/occlusion, coordinate, tracking and rights contracts."
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Choose annotation units before choosing drawing tools",
+      "source_section_sha256": "e1fd790b13a3735406d228985668d35479a5b520969230c5f071add298f27d64",
+      "destinations": [
+        "track-03-vision-video"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse substantive geometry, mask/occlusion, coordinate, tracking and rights contracts."
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Simulation provides known scene state",
+      "source_section_sha256": "b154eaaac20e122d025db29e6e55f26f9564334bd55bf8d8f5417651b5491103",
+      "destinations": [
+        "track-03-vision-video"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse substantive geometry, mask/occlusion, coordinate, tracking and rights contracts."
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Domain randomization is a transfer hypothesis",
+      "source_section_sha256": "b0cc5300a03d0601a0969365801b5b9dd3723800feebd170b80f93c4394f39a9",
+      "destinations": [
+        "track-03-vision-video"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse substantive geometry, mask/occlusion, coordinate, tracking and rights contracts."
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Model assisted masks need temporal quality checks",
+      "source_section_sha256": "0e1b9bafd0d309f57143bf001ea6088279df74b85dfb8bf3a85a59457fb247e3",
+      "destinations": [
+        "track-03-vision-video"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse substantive geometry, mask/occlusion, coordinate, tracking and rights contracts."
+    },
+    {
+      "source_chapter": 9,
+      "source_section": "Captions for image generation",
+      "source_section_sha256": "4f76ff8ff5ecb534438ef58eb5196ac8237acdf77c92185db827f351a3b8fe87",
+      "destinations": [
+        "track-03-vision-video"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse substantive geometry, mask/occlusion, coordinate, tracking and rights contracts."
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Audio segmentation alignment and diversity \u2014 opening",
+      "source_section_sha256": "fbb07f407c421bbd3858a5dc6a26ec7a1ce9f93fb3de5a564583af66a09e0c1a",
+      "destinations": [
+        "track-04-audio"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse segmentation/alignment, speech/speaker/session, sampling and consent contracts."
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Distinguish the stages",
+      "source_section_sha256": "95d00dfe341b0ecc63ac3ae08b95c268ebe31911845c4521235ae7c520bc313f",
+      "destinations": [
+        "track-04-audio"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse segmentation/alignment, speech/speaker/session, sampling and consent contracts."
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Segment with the target in mind",
+      "source_section_sha256": "2be57a92bbc737346ef9a367addda1a86bff02565229a101bf11667c627daac3",
+      "destinations": [
+        "track-04-audio"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse segmentation/alignment, speech/speaker/session, sampling and consent contracts."
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Decide what the transcript represents",
+      "source_section_sha256": "5e619678fbb69ce9d6bef42128df19698bb79c7aaf379a08ecd80ff45aaec506",
+      "destinations": [
+        "track-04-audio"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse segmentation/alignment, speech/speaker/session, sampling and consent contracts."
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Diversity and split design need more than speaker count",
+      "source_section_sha256": "376f096d81a03a8749e3702b62ffefa92fa37c96263f1de248173f964a402a39",
+      "destinations": [
+        "track-04-audio"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse segmentation/alignment, speech/speaker/session, sampling and consent contracts."
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Recognition and generation need distinct release gates",
+      "source_section_sha256": "0a0782b722f52a100dfe03f00440373d26beec04d63b9607b91a895fa33b16c1",
+      "destinations": [
+        "track-04-audio"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse segmentation/alignment, speech/speaker/session, sampling and consent contracts."
+    },
+    {
+      "source_chapter": 10,
+      "source_section": "Read the applicable subset terms",
+      "source_section_sha256": "68349d137413c1faa489becf17f862c7a4092d106a4aa6c3c8afeef068caa218",
+      "destinations": [
+        "track-04-audio"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Reuse segmentation/alignment, speech/speaker/session, sampling and consent contracts."
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Text retrieval preferences and tool environments \u2014 opening",
+      "source_section_sha256": "77709f412e4823d7dcde7ce2249f1fa6f1a38473a56287abc85e9a61274c9839",
+      "destinations": [
+        "track-01-text-retrieval",
+        "track-05-reasoning-trajectories"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Retain text, retrieval, preference and executable tool-context contracts in optional tracks."
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Documents conversations and preferences are different units",
+      "source_section_sha256": "c9b4d0398b86bdcca0be9e559b88f663de6e5d9ee1bb1831dae453dc7c247c55",
+      "destinations": [
+        "track-01-text-retrieval",
+        "track-05-reasoning-trajectories"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Retain text, retrieval, preference and executable tool-context contracts in optional tracks."
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Retrieval supervision and negative mining",
+      "source_section_sha256": "f436e165f02ace06940cce48d206c567059f9c4f82a6965ab8f4525bdd46bc4d",
+      "destinations": [
+        "track-01-text-retrieval",
+        "track-05-reasoning-trajectories"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Retain text, retrieval, preference and executable tool-context contracts in optional tracks."
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Preference judgments and pair construction",
+      "source_section_sha256": "ca4fa4230c125e00743d36b4c00679ef3886f10541021b45d4cff56727c84424",
+      "destinations": [
+        "track-01-text-retrieval",
+        "track-05-reasoning-trajectories"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Retain text, retrieval, preference and executable tool-context contracts in optional tracks."
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Tool trajectories require an environment contract",
+      "source_section_sha256": "7f794df333fc5bc72f0eea83086e9890d8867d53e6a258f6db7de2811e34704d",
+      "destinations": [
+        "track-01-text-retrieval",
+        "track-05-reasoning-trajectories"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Retain text, retrieval, preference and executable tool-context contracts in optional tracks."
+    },
+    {
+      "source_chapter": 11,
+      "source_section": "Preserve failures that teach the right lesson",
+      "source_section_sha256": "2e2b8618f14262233521ea5755bce984460cde6ce3cd93d8c247997ed868ea04",
+      "destinations": [
+        "track-01-text-retrieval",
+        "track-05-reasoning-trajectories"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Retain text, retrieval, preference and executable tool-context contracts in optional tracks."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Debug data and test causal explanations \u2014 opening",
+      "source_section_sha256": "df85d922775906a8bca47be987bf5dcdc74f9962c32aaa5b6fbecefdd43d3d8a",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Build a failure record that supports comparison",
+      "source_section_sha256": "bfbbff3a6f7f1b9cc575b75877ca25cb5bce9c84ba6192d83a60067c91596570",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Slices turn averages into questions",
+      "source_section_sha256": "4071cd5e8408fa9095e05da211744ffb360cb3ed6b1049137a4437583e9570ee",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Automated slice discovery is a hypothesis generator",
+      "source_section_sha256": "b6a0782cbaff6e160f476b32883fefbdf8abeb74fb1542210db7fd790bf7f055",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Training dynamics reveal different kinds of difficulty",
+      "source_section_sha256": "aeab3b234ce5ef7f9325be7ade94ed5d4a7c037352d296bed4ff18c04391216f",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Influence asks which training changes might matter",
+      "source_section_sha256": "b5ed4fb36672d2ea92ba459e9e94c1050cbf274a34c943d87a6c06da1dc76c66",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Test a proposed repair with an explicit intervention",
+      "source_section_sha256": "cf0315d9c7442d44236c0a6d2d9e64befd797e2c7e511874ca0031b79cb81bcc",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Distribution shift changes what an evaluation means",
+      "source_section_sha256": "9a2e045069918c9e8aa5a016d5bcf080fd3c4e2c05e73c4d75885357d9988a4a",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Some failures are underdetermined by the training objective",
+      "source_section_sha256": "3a67269add8a52efa3327de8fa25d8f951e91cca5d406112828ff74279ea026a",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Close the loop without contaminating the final test",
+      "source_section_sha256": "71ba01efe41a667ad8ec64ffd2d64efc4a56fff7c83b61585daef72f264d7fc2",
+      "destinations": [
+        "chapter-evaluate-diagnose",
+        "track-advanced-methods"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Teach first-incorrect-artifact diagnosis; retain published model-debugging/causal methods."
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Reconstruct published production systems \u2014 opening",
+      "source_section_sha256": "58506659c335ca4e5f0a9cbffbb7b2a5fd1f5656cc6bef18585e373818bd2339",
+      "destinations": [
+        "case-03-published-production-systems"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep all five published system cases with original source attribution and evidence boundary."
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 1 DCLM makes data selection the experimental variable",
+      "source_section_sha256": "d3649844df89db0c1924303dac1938f48a280974ec9b5c6e478be8963994769b",
+      "destinations": [
+        "case-03-published-production-systems"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep all five published system cases with original source attribution and evidence boundary."
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 2 FineWeb Edu distills an expensive judgment into a cheap filter",
+      "source_section_sha256": "89e101a65ced616f0f7a716aaee00cac85534c2cfbba78334d05d511717c260b",
+      "destinations": [
+        "case-03-published-production-systems"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep all five published system cases with original source attribution and evidence boundary."
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 3 T\u00fclu 3 builds supervision for successive training stages",
+      "source_section_sha256": "b30f2bb9b5e0652ea8ff3e3f1a1ff499277d117b07a8e60ad49c42a559dbe986",
+      "destinations": [
+        "case-03-published-production-systems"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep all five published system cases with original source attribution and evidence boundary."
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 4 SAM 2 improves both annotations and the annotation process",
+      "source_section_sha256": "92ed18c61d33b0f1450bec2fb4a6cbca33f0401d8d9decc48d4e7d2fe34e2930",
+      "destinations": [
+        "case-03-published-production-systems"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep all five published system cases with original source attribution and evidence boundary."
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "Case 5 Granary repairs boundaries and pseudo labels together",
+      "source_section_sha256": "abb50b47519a29ca7eeeb7fa6ffd0af79949fc844f29dd7be66b3c74c93925f7",
+      "destinations": [
+        "case-03-published-production-systems"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep all five published system cases with original source attribution and evidence boundary."
+    },
+    {
+      "source_chapter": 13,
+      "source_section": "A comparison framework worth keeping",
+      "source_section_sha256": "f39f9f654ad4577d9dc8a2ccf5acab4e1792288814c8764e352ea658a024de6f",
+      "destinations": [
+        "case-03-published-production-systems"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Keep all five published system cases with original source attribution and evidence boundary."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Economics scale and maintenance \u2014 opening",
+      "source_section_sha256": "bbc227592ce4e0bf5b001b98ea917b529c68769cac7e3be34f3b1cfe2fd88b3c",
+      "destinations": [
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Integrate total-pipeline economics, matched quality and repair/rejection/repeat costs."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Count the whole pipeline",
+      "source_section_sha256": "fb8100d4ade7a1efdade0f6bf3e43e6dc3ba93e76d8355f80705d396a3170e37",
+      "destinations": [
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Integrate total-pipeline economics, matched quality and repair/rejection/repeat costs."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Order checks with both cost and constraints in mind",
+      "source_section_sha256": "e5bbaea62134da0632d9c722d1662ec75dab0cf74ee5bad9ceb6bfc51db41f8e",
+      "destinations": [
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Integrate total-pipeline economics, matched quality and repair/rejection/repeat costs."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Allocate review to the question",
+      "source_section_sha256": "66b382e9762d8ee1de2c7235d88602118bafb947e832a7566131479ec187b4c8",
+      "destinations": [
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Integrate total-pipeline economics, matched quality and repair/rejection/repeat costs."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Generation scale does not remove human bottlenecks",
+      "source_section_sha256": "d48ec62619ddca97a7e47a24a6501f6a54bc570538104425df8d9000f08b2049",
+      "destinations": [
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Integrate total-pipeline economics, matched quality and repair/rejection/repeat costs."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Budget for change after release",
+      "source_section_sha256": "71fe04df940e1c8d9bf5f267c5860d853f076588ed81dfe4741ac1b12194e35d",
+      "destinations": [
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Integrate total-pipeline economics, matched quality and repair/rejection/repeat costs."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Scale storage around the access pattern",
+      "source_section_sha256": "64e0f7838ecaca8468a7a457b1e4f487fe4e3adc26c1198197393474ebe0fb83",
+      "destinations": [
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Integrate total-pipeline economics, matched quality and repair/rejection/repeat costs."
+    },
+    {
+      "source_chapter": 15,
+      "source_section": "A release is a selection of exact revisions",
+      "source_section_sha256": "ab200505a27d8129defef92ee490d4fd1fbb86e6814e027c60627197c5ffee20",
+      "destinations": [
+        "chapter-freeze-consumer",
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Separate freeze/consumer semantics from incident monitoring and three recovery operations."
+    },
+    {
+      "source_chapter": 15,
+      "source_section": "Make every adapter declare its boundaries",
+      "source_section_sha256": "039ab34c29269875676c4d9d410b5737dabcf59bb36e53c78d9a28c04398f38c",
+      "destinations": [
+        "chapter-freeze-consumer",
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Separate freeze/consumer semantics from incident monitoring and three recovery operations."
+    },
+    {
+      "source_chapter": 15,
+      "source_section": "Loader tests are the acceptance test",
+      "source_section_sha256": "85f7f81ad7f8215d979417285908a07c39937e86c026706bbba48f06ff3a7e48",
+      "destinations": [
+        "chapter-freeze-consumer",
+        "chapter-operate-recover-cost"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Separate freeze/consumer semantics from incident monitoring and three recovery operations."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Apply the methods to Tuldok \u2014 opening",
+      "source_section_sha256": "e51c06f6101b3a782f0ff6015af52b576e6bda61e5e36181c34198402cf27e35",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "The audited baseline",
+      "source_section_sha256": "dc3fc198afa9cb54fff7387acc1b1aeabd414db749fe17d1b771df80cce1b111",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Where the current model stops",
+      "source_section_sha256": "e922e8d376ead70e775dce38780f8ae75494fa0fc377871ab46222921dca7e40",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "The newer integration branch",
+      "source_section_sha256": "f934b6e01f8c82ebe4d00297566e3d2217e7a1681388aa8d9941cdfe944a776e",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "An additive boundary",
+      "source_section_sha256": "64421b80a75fe83b18017c26d856024003db973999dece80ecf8766838e4a717",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Dataset overview and readiness",
+      "source_section_sha256": "690f44d3c1a693de2e60a7b0f8c9dd1173a225925493d8efe2de644345a4b457",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Task aware annotation",
+      "source_section_sha256": "49f63549b1f135f04ef0612bb1fe61dc9d75bbe39d20b6b8fd04ccceb2b1e6e2",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Recipe preview and review queue",
+      "source_section_sha256": "17dc39cf382ec9b730ce045ff5c5c29542b26ef743c370a5bc6a8ce1d199f74c",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Lineage and split explorer",
+      "source_section_sha256": "ac5e8f84274e7a396da99de4e6f853cb967f574f634b75e738ec4dab2040d0c9",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Release builder and evaluation return",
+      "source_section_sha256": "2a72e320ce45c4f7ca2180824ea2555518b9e98c157bbb814ba2aca63324e878",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Option A Make the existing task reproducible",
+      "source_section_sha256": "d01049bb38ac8a6486437c4ec7bc9b630df635ca099223448051225e003203ef",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Option B Add classification and captions",
+      "source_section_sha256": "372dcfc4aaec04896c4d784d1123a56987bbc0be901b098a5e01b17738f20a35",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Option C Add structured text and decisions",
+      "source_section_sha256": "7a4cff28f0394215d4d562771bd7c0294d91b56d9f107febcf864e5b1f50e0e3",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Option D Add masks and audio when their editors justify it",
+      "source_section_sha256": "acd11a60e69f12da150290280db4bf70495cdb0b0ab15d39c8fbd7efe16dc7e0",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_chapter": 16,
+      "source_section": "Later options should answer measured needs",
+      "source_section_sha256": "e4a23e88f8c5fc65ded2879b320cbbeaae8cdcf09e40dfab3a448d4f8c82294e",
+      "destinations": [
+        "case-02-tuldok",
+        "case-90-versioned-product-appendix"
+      ],
+      "status": "migrated or consolidated; exact original retained in prior edition",
+      "editorial_action": "Replace stale current-product claims with pinned 13 October source evidence; retain old proposal as historical reference and web concept."
+    },
+    {
+      "source_section": "Appendix A Exact training companion contracts",
+      "source_section_sha256": "13e2f96cba47ece44fbb8f483a2848091240b2f316e867b761426e935d84533e",
+      "destinations": [
+        "appendix-a"
+      ],
+      "status": "retained with dated boundary",
+      "editorial_action": "Preserve exact substantive appendix, add current evidence/consumer boundary."
+    },
+    {
+      "source_section": "Appendix B Production tools and edition boundaries",
+      "source_section_sha256": "1a4069da3007860b8ff7ea2f8977a941020bd2a1cbc29b323defedf00a1329c4",
+      "destinations": [
+        "appendix-b"
+      ],
+      "status": "retained with dated boundary",
+      "editorial_action": "Preserve exact substantive appendix, add current evidence/consumer boundary."
+    },
+    {
+      "source_section": "Appendix C Example schemas and export relationships",
+      "source_section_sha256": "2e64be9d9ede82bf013f765b44ac03565946ad8ba8108a2f4cdf17b52a952402",
+      "destinations": [
+        "appendix-c"
+      ],
+      "status": "retained with dated boundary",
+      "editorial_action": "Preserve exact substantive appendix, add current evidence/consumer boundary."
+    },
+    {
+      "source_section": "Appendix D Worksheets and release review",
+      "source_section_sha256": "b910a5ee88c2563f412c1092af66197516fa0a428137dfcdfa2a55656237ff54",
+      "destinations": [
+        "appendix-d"
+      ],
+      "status": "retained with dated boundary",
+      "editorial_action": "Preserve exact substantive appendix, add current evidence/consumer boundary."
+    },
+    {
+      "source_section": "References and evidence notes",
+      "destinations": [
+        "references-and-evidence-notes",
+        "case-evidence-ledger"
+      ],
+      "status": "retained and supplemented",
+      "editorial_action": "Preserve primary attribution; distinguish old source observations from current pinned case ledger."
+    }
+  ]
+}

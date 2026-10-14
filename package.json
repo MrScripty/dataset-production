@@ -1,1 +1,13 @@
-{"name":"dataset-production-fieldbook","version":"1.0.0","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.js","build":"python3 scripts/build_book.py","serve":"python3 -m http.server 8094 --directory docs"}}
+{
+  "name": "dataset-production-fieldbook",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "build": "python3 scripts/build_principles_edition.py && python3 scripts/build_book.py",
+    "serve": "python3 -m http.server 8094 --directory docs",
+    "release": "python3 scripts/build_principles_edition.py && python3 scripts/build_book.py --release && python3 scripts/social_metadata.py",
+    "check": "npm test && python3 -B -m unittest discover -s tests -v && python3 tests/check_links.py && python3 tests/check_social_metadata.py"
+  }
+}

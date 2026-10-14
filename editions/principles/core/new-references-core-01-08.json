@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Unicode Standard Annex #15: Unicode Normalization Forms",
+    "organization": "Unicode Consortium",
+    "version": "revision 57",
+    "url": "https://www.unicode.org/reports/tr15/tr15-57.html",
+    "supports": "Canonical versus compatibility normalization; meaning can be lost under compatibility normalization."
+  },
+  {
+    "title": "Trafilatura: A Web Scraping Library and Command-Line Tool for Text Discovery and Extraction",
+    "author": "Adrien Barbaresi",
+    "year": 2021,
+    "venue": "ACL-IJCNLP System Demonstrations",
+    "url": "https://aclanthology.org/2021.acl-demo.15.pdf",
+    "supports": "Published web-content extraction study, separate from the authored nested-negation diagnostic."
+  },
+  {
+    "title": "Deduplicating Training Data Makes Language Models Better",
+    "author": "Katherine Lee and colleagues",
+    "year": 2022,
+    "venue": "ACL",
+    "url": "https://aclanthology.org/2022.acl-long.577.pdf",
+    "supports": "Task- and experiment-bounded motivation for deduplication, not a universal delete-more rule."
+  },
+  {
+    "title": "Verification and Validation of CFD: Overview",
+    "organization": "NASA/NPARC Alliance",
+    "url": "https://www.grc.nasa.gov/WWW/wind/valid/tutorial/overview.html",
+    "supports": "Distinction between verification and physical validation; no toy field realism claim."
+  },
+  {
+    "title": "Verification Assessment",
+    "organization": "NASA/NPARC Alliance",
+    "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/verassess.html",
+    "supports": "Numerical verification evidence and limits."
+  }
+]

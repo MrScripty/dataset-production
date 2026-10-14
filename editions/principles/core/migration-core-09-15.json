@@ -1,0 +1,842 @@
+{
+  "author": "Puma",
+  "scope": "Core chapters 9–15, section-level migration and supplied CPU additions",
+  "source_revision": "416c4b12ad2b9649c2c38bad4d2c7ed5f77eac5f",
+  "source_merge": "ac62387a3a9760e3f1e9f8b8290552cb2dc13471",
+  "entries": [
+    {
+      "source_chapter": 6,
+      "source_section": "Begin with a baseline that can be beaten",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Four different ways to change a collection"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Uncertainty asks where the current model hesitates",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Why uncertainty and diversity are signals"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Diversity asks what the batch adds collectively",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Why uncertainty and diversity are signals; Optional methods, tools and primary reading"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Hard examples and hard negatives need verification",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Why uncertainty and diversity are signals; Optional methods, tools and primary reading"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 6,
+      "source_section": "Selection for evaluation is a different problem",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Acceptance check and worked answer; Optional methods, tools and primary reading"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Decide what the mixture weights count",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Mixture weights count something specific"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Decide what the mixture weights count"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Compare source balance against the actual objective",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Optional methods, tools and primary reading"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Compare source balance against the actual objective"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Repetition is neither automatically wasteful nor equivalent to new data",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Mixture weights count something specific"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Repetition is neither automatically wasteful nor equivalent to new data"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "A curriculum changes the path through the data",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Mixture weights count something specific; Optional methods, tools and primary reading"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "A curriculum changes the path through the data"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "Data value is a conditional attribution",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Optional methods, tools and primary reading"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Data value is a conditional attribution"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 7,
+      "source_section": "A practical selection experiment",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/09-collect-or-select.md",
+          "section": "Controlled exercise: spend the same review budget"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "A practical selection experiment"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Match the generation strategy to the gap",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Choose generation for the missing evidence"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Match the generation strategy to the gap"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Separate the teacher's jobs",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Keep roles and failures visible"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Separate the teacher's jobs"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "A verifier changes the composition of the dataset",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "A verifier changes both quality and composition"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "A verifier changes the composition of the dataset"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Use several levels of verification",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Verify one synthetic helpdesk record; Work a fraction contract before building a verifier"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Use several levels of verification"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Process labels and outcome labels answer different questions",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Work a fraction contract before building a verifier"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Process labels and outcome labels answer different questions"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Refinement is a proposal until it is rechecked",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Keep roles and failures visible"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Refinement is a proposal until it is rechecked"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Model judges need calibration and bias checks",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Keep roles and failures visible"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Model judges need calibration and bias checks"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Measure useful diversity",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "A verifier changes both quality and composition"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Measure useful diversity"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "Recursive replacement and accumulation are different experiments",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Optional deeper methods and primary reading"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Recursive replacement and accumulation are different experiments"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 8,
+      "source_section": "A bounded synthetic production experiment",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/12-generate-and-verify.md",
+          "section": "Controlled exercise and Part 3 assessment"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "A bounded synthetic production experiment"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Build a failure record that supports comparison",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Find the first wrong artifact"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Build a failure record that supports comparison"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Slices turn averages into questions",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Slices and regimes bound the claim"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Slices turn averages into questions"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Automated slice discovery is a hypothesis generator",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Optional diagnostic methods and primary reading"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Automated slice discovery is a hypothesis generator"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Training dynamics reveal different kinds of difficulty",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Optional diagnostic methods and primary reading"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Training dynamics reveal different kinds of difficulty"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Influence asks which training changes might matter",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Optional diagnostic methods and primary reading"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Influence asks which training changes might matter"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Test a proposed repair with an explicit intervention",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Test the explanation with a separate intervention"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Test a proposed repair with an explicit intervention"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Distribution shift changes what an evaluation means",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Slices and regimes bound the claim"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Distribution shift changes what an evaluation means"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Some failures are underdetermined by the training objective",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Slices and regimes bound the claim"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Some failures are underdetermined by the training objective"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 12,
+      "source_section": "Close the loop without contaminating the final test",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/13-evaluate-and-diagnose.md",
+          "section": "Keep an exposure ledger"
+        },
+        {
+          "file": "editions/principles/tracks/advanced-methods.md",
+          "section": "Close the loop without contaminating the final test"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence. Detailed specialist methods, published numerical comparisons and limitations retained verbatim/revised in the optional advanced track by the track writer."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Count the whole pipeline",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Count the whole cost pipeline; Compare costs at matched quality"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Order checks with both cost and constraints in mind",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Count the whole cost pipeline"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Allocate review to the question",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Allocate review to the decision"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "All three review purposes, optional optimal cost allocation with assumptions, coverage floors, repair score and adaptive-repeat agreement caveat retained with plain explanation and worked ratio."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Generation scale does not remove human bottlenecks",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Compare costs at matched quality"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Budget for change after release",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Work the parser incident into a decision; Compare costs at matched quality"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 14,
+      "source_section": "Scale storage around the access pattern",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Three recovery verbs, three kinds of evidence; Compare costs at matched quality"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 15,
+      "source_section": "A release is a selection of exact revisions",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/14-freeze-and-test.md",
+          "section": "A release and an export are different identities"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 15,
+      "source_section": "Make every adapter declare its boundaries",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/14-freeze-and-test.md",
+          "section": "Work an exact educational adapter; Test two independent kinds of correctness"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_chapter": 15,
+      "source_section": "Loader tests are the acceptance test",
+      "source_file": "editions/research-2026-10-02/manuscript.md",
+      "destinations": [
+        {
+          "file": "editions/principles/core/14-freeze-and-test.md",
+          "section": "Controlled exercise: build, export, read and challenge; Optional tools, boundary fixtures and primary reading"
+        }
+      ],
+      "status": "retained and rewritten; specialist material optional where stated",
+      "note": "Principle rewritten in beginner sequence; original evidence types retained. No original unrun result became executed evidence."
+    },
+    {
+      "source_file": "editions/next/chapters/augmentation.md",
+      "source_section": "Move a shape and follow its labels",
+      "destinations": [
+        {
+          "file": "editions/principles/core/10-transform-examples.md",
+          "section": "Work one square through two tasks"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/augmentation.md",
+      "source_section": "A plausible change can destroy the lesson",
+      "destinations": [
+        {
+          "file": "editions/principles/core/10-transform-examples.md",
+          "section": "Cropping can change the question; Text, sound and fields have the same dependency"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/augmentation.md",
+      "source_section": "Choose a change for a reason",
+      "destinations": [
+        {
+          "file": "editions/principles/core/10-transform-examples.md",
+          "section": "Separate validity from utility"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/augmentation.md",
+      "source_section": "Work through a small audit",
+      "destinations": [
+        {
+          "file": "editions/principles/core/10-transform-examples.md",
+          "section": "Controlled exercise: audit six derivatives"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/augmentation.md",
+      "source_section": "Exercise decide what must change",
+      "destinations": [
+        {
+          "file": "editions/principles/core/10-transform-examples.md",
+          "section": "Acceptance check and worked answer"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/weak-semisupervised.md",
+      "source_section": "Let a rule vote without pretending it knows everything",
+      "destinations": [
+        {
+          "file": "editions/principles/core/11-scale-supervision.md",
+          "section": "Work the rule votes before combining them"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/weak-semisupervised.md",
+      "source_section": "Measure reach separately from correctness",
+      "destinations": [
+        {
+          "file": "editions/principles/core/11-scale-supervision.md",
+          "section": "Coverage and agreement have different denominators"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/weak-semisupervised.md",
+      "source_section": "A model can also propose a label",
+      "destinations": [
+        {
+          "file": "editions/principles/core/11-scale-supervision.md",
+          "section": "A model supplies pseudo-labels under a policy"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/weak-semisupervised.md",
+      "source_section": "Consistency adds a second kind of evidence",
+      "destinations": [
+        {
+          "file": "editions/principles/core/11-scale-supervision.md",
+          "section": "Consistency does not create independent truth"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/weak-semisupervised.md",
+      "source_section": "What would a real comparison need?",
+      "destinations": [
+        {
+          "file": "editions/principles/core/11-scale-supervision.md",
+          "section": "Keep calibration and final references in different roles"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/weak-semisupervised.md",
+      "source_section": "Exercise inspect the votes before changing the method",
+      "destinations": [
+        {
+          "file": "editions/principles/core/11-scale-supervision.md",
+          "section": "Controlled exercise: audit the operating point"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Beginner worked exercise, target/label distinctions and original source attribution retained."
+    },
+    {
+      "source_file": "editions/next/chapters/monitoring.md",
+      "source_section": "Start with the behavior that must remain correct",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Work the parser incident into a decision"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Authored illustrations remain labeled. Monitoring paper exercise is extended with a bounded executable toy restore; no production/model behavior is asserted."
+    },
+    {
+      "source_file": "editions/next/chapters/monitoring.md",
+      "source_section": "Use a small known case to notice the change",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Work the parser incident into a decision"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Authored illustrations remain labeled. Monitoring paper exercise is extended with a bounded executable toy restore; no production/model behavior is asserted."
+    },
+    {
+      "source_file": "editions/next/chapters/monitoring.md",
+      "source_section": "Diagnose the first incorrect representation",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Work the parser incident into a decision"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Authored illustrations remain labeled. Monitoring paper exercise is extended with a bounded executable toy restore; no production/model behavior is asserted."
+    },
+    {
+      "source_file": "editions/next/chapters/monitoring.md",
+      "source_section": "Contain the problem before preparing a repair",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Three recovery verbs, three kinds of evidence"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Authored illustrations remain labeled. Monitoring paper exercise is extended with a bounded executable toy restore; no production/model behavior is asserted."
+    },
+    {
+      "source_file": "editions/next/chapters/monitoring.md",
+      "source_section": "Build a corrected candidate without erasing the evidence",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Work the parser incident into a decision"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Authored illustrations remain labeled. Monitoring paper exercise is extended with a bounded executable toy restore; no production/model behavior is asserted."
+    },
+    {
+      "source_file": "editions/next/chapters/monitoring.md",
+      "source_section": "Turn the incident into a better next release",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Work the parser incident into a decision"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Authored illustrations remain labeled. Monitoring paper exercise is extended with a bounded executable toy restore; no production/model behavior is asserted."
+    },
+    {
+      "source_file": "editions/next/chapters/monitoring.md",
+      "source_section": "Exercise complete the incident decision",
+      "destinations": [
+        {
+          "file": "editions/principles/core/15-operate-recover-cost.md",
+          "section": "Controlled exercise and acceptance check; Execute an independent toy restore"
+        }
+      ],
+      "status": "retained and extended",
+      "note": "Authored illustrations remain labeled. Monitoring paper exercise is extended with a bounded executable toy restore; no production/model behavior is asserted."
+    }
+  ],
+  "new_material": [
+    {
+      "file": "editions/principles/core/14-freeze-and-test.md",
+      "description": "Tested educational text adapter boundary, exact decoded consumer semantics and reference-input retention."
+    },
+    {
+      "file": "editions/principles/core/15-operate-recover-cost.md",
+      "description": "Executed toy independent-backup restoration after deliberate complete working-tree loss; full matched-quality costs and capstone."
+    }
+  ],
+  "not_removed": "Substantive research detail remains in optional advanced methods, modality tracks, published cases and the preserved research edition; repeated advanced explanations are abbreviated in core."
+}

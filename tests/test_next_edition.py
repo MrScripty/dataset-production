@@ -36,7 +36,7 @@ class HTMLAudit(HTMLParser):
 
 class NextEditionTests(unittest.TestCase):
     def test_retained_source_is_exact_audited_blob(self):
-        source = (ROOT / 'docs/book/manuscript.md').read_bytes()
+        source = (ROOT / 'editions/research-2026-10-02/manuscript.md').read_bytes()
         blob = hashlib.sha1(b'blob ' + str(len(source)).encode() + b'\0' + source).hexdigest()
         self.assertEqual(blob, '8f10a4bc9adc5325974fa0e3cdba1a97127d3fdf')
 
@@ -70,7 +70,7 @@ class NextEditionTests(unittest.TestCase):
             self.assertTrue(name.endswith('.svg'))
 
     def test_build_emits_reader_and_refuses_overwrite(self):
-        source_hash = hashlib.sha256((ROOT / 'docs/book/manuscript.md').read_bytes()).hexdigest()
+        source_hash = hashlib.sha256((ROOT / 'editions/research-2026-10-02/manuscript.md').read_bytes()).hexdigest()
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / 'review'
             command = [sys.executable, str(ROOT / 'scripts/build_next_edition.py'), '--out', str(output)]
@@ -83,7 +83,7 @@ class NextEditionTests(unittest.TestCase):
             self.assertIn('a{color:#1257a4;overflow-wrap:anywhere}', page)
             self.assertRegex(page, r'body\{[^}]*overflow-wrap:anywhere')
             self.assertEqual(subprocess.run(command, capture_output=True).returncode, 2)
-        self.assertEqual(hashlib.sha256((ROOT / 'docs/book/manuscript.md').read_bytes()).hexdigest(), source_hash)
+        self.assertEqual(hashlib.sha256((ROOT / 'editions/research-2026-10-02/manuscript.md').read_bytes()).hexdigest(), source_hash)
 
     def test_preformatted_scroller_preserves_text_attributes_and_keyboard_access(self):
         source = ('<p>Inline <code>keep wrapping</code>.</p>'

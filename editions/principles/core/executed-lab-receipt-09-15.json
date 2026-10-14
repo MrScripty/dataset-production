@@ -1,0 +1,291 @@
+{
+  "recorded_at": "2026-10-13T22:50:02.209882+00:00",
+  "evidence_label": "executed authored CPU fixtures",
+  "author": "Puma",
+  "environment": {
+    "python": "3.12.14",
+    "unicode_database": "15.0.0",
+    "platform": "Linux"
+  },
+  "snapshot_policy": "File-byte-pinned working snapshot; not a committed source revision or production deployment",
+  "implementation_and_input_sha256": {
+    "examples/consumer-contract/contract.py": "d8efde449ab75fbf36d0555466c01269b831803ec237ba302122b02ae67890c5",
+    "examples/consumer-contract/tests/test_consumer_contract.py": "f6b8ff6b57a154c6e2c70bef948d71e58a4542df29e14fa521c88c22f0c06e64",
+    "examples/first-release/build.py": "7b33aaf0b99e5397345061154508adc2e6ccd6872219fc03314791f6234cd979",
+    "examples/first-release/data/gold.json": "203a8bb1ed213d2a61520717adc04fdfab654dc5b6eabd3a4de63337b9c76176",
+    "examples/first-release/data/records.jsonl": "6f5c21ce6e70abb56712fa0e5b6058cc678579564d9a36e22d6898af0d79071e",
+    "examples/recovery/recovery.py": "cb1740cc3fae4dc0803cde4770d449414ab384a3102d64d1c20ebf26369cd9dd",
+    "examples/recovery/tests/test_recovery.py": "92aad9411b48179155aa4f4b46c90fca5eb14e7d79dc25792df4884949f2fcb2"
+  },
+  "test_runs": [
+    {
+      "command": "python3 -m unittest discover -s examples/consumer-contract/tests -p test_*.py -v",
+      "exit_code": 0,
+      "passed_tests": 8
+    },
+    {
+      "command": "python3 -m unittest discover -s examples/recovery/tests -p test_*.py -v",
+      "exit_code": 0,
+      "passed_tests": 8
+    }
+  ],
+  "demo_results": [
+    {
+      "counts": {
+        "accepted_raw_records": 28,
+        "canonical_examples": 24,
+        "duplicate_records_collapsed": 4,
+        "input_lines": 30,
+        "leakage_groups": 21,
+        "quarantined_lines": 2
+      },
+      "weak_labels": {
+        "abstain": 5,
+        "accuracy": 0.7692307692307693,
+        "conflict": 5,
+        "correct": 10,
+        "errors": [
+          {
+            "canonical_id": "ex-4b3ace530b371efce21b6d78063351a55627997c6c6c98a4c7f95efdee5e9735",
+            "gold": "technical",
+            "prediction": "access"
+          },
+          {
+            "canonical_id": "ex-9a630da1e4147bbcac511a12a5b6a7bd7289a624fefeff1a756a4512dd29123e",
+            "gold": "technical",
+            "prediction": "billing"
+          },
+          {
+            "canonical_id": "ex-c166a31bfa6148b295c67c7f4307401ae1aa2b340bd199199118ef652a67527c",
+            "gold": "technical",
+            "prediction": "billing"
+          }
+        ],
+        "evaluated_predictions": 13,
+        "labeled": 14
+      }
+    },
+    {
+      "accepted": 14,
+      "adapter": "educational-text-routing-1",
+      "compatibility": "Only contract.py load_batch; no Training Your Own Models compatibility",
+      "consumer": "educational-text-routing-1",
+      "excluded": 10,
+      "outputs": {
+        "exclusions.json": {
+          "bytes": 1148,
+          "sha256": "1c2892c2cc8b6ad68739a0ce8541c30dd16e96971d8de00e8722a43d86e27380"
+        },
+        "rows.jsonl": {
+          "bytes": 3404,
+          "sha256": "376e51d8a9aaf6b0732e3cec931d3539dda616204e517bf803d5e751782a8dfd"
+        },
+        "schema.json": {
+          "bytes": 428,
+          "sha256": "1a4d14c82b256093729b1d4f3fdfb292e45ad6dc40514fb37a0b11dd3b70ec42"
+        }
+      },
+      "source_manifest_sha256": "9e9f300ea85d1df4b1a9debcc42175cae43413f290779299977e8fad5ad4d726",
+      "source_release_sha256": "72acf068495c9abab7a3638feb19c7d2e8fc774bd637011c28956ae37b309580"
+    },
+    {
+      "consumer": "educational-text-routing-1",
+      "rows_read": 14
+    },
+    {
+      "evidence_label": "executed authored CPU fixture",
+      "independent_backup": {
+        "consumer": "toy-refund-consumer-1",
+        "hashes_verified": 3,
+        "parser": "all-text-v1",
+        "refund_requested": false,
+        "release": "R1",
+        "text": "Please do not refund this payment."
+      },
+      "limits": "Toy sibling-directory backup only; no model, remote durability, credentials or production recovery guarantee",
+      "restart": {
+        "job": "toy-build-R2",
+        "resumes": 1,
+        "status": "complete"
+      },
+      "restart_did_not_repair": "nested-negation regression failed",
+      "restore": {
+        "consumer": "toy-refund-consumer-1",
+        "hashes_verified": 3,
+        "parser": "all-text-v1",
+        "refund_requested": false,
+        "release": "R1",
+        "text": "Please do not refund this payment."
+      },
+      "restored_hashes_match": true,
+      "rollback": {
+        "consumer": "toy-refund-consumer-1",
+        "hashes_verified": 3,
+        "parser": "all-text-v1",
+        "refund_requested": false,
+        "release": "R1",
+        "text": "Please do not refund this payment."
+      },
+      "unit": "one authored nested-negation request",
+      "working_tree_removed_before_restore": true
+    }
+  ],
+  "source_release_manifest": {
+    "format_version": 1,
+    "inputs": {
+      "build.py": {
+        "sha256": "7b33aaf0b99e5397345061154508adc2e6ccd6872219fc03314791f6234cd979"
+      },
+      "gold.json": {
+        "bytes": 943,
+        "sha256": "203a8bb1ed213d2a61520717adc04fdfab654dc5b6eabd3a4de63337b9c76176"
+      },
+      "records.jsonl": {
+        "bytes": 3097,
+        "sha256": "6f5c21ce6e70abb56712fa0e5b6058cc678579564d9a36e22d6898af0d79071e"
+      }
+    },
+    "manifest_hash_policy": "manifest.json is excluded from its own output hash map to avoid recursion",
+    "outputs": {
+      "audit.json": {
+        "bytes": 3254,
+        "sha256": "96fa6e02cf575fe5aa768cf61275b204a8fc68d8cbddbe7169086269e09bee54"
+      },
+      "dev.jsonl": {
+        "bytes": 1770,
+        "sha256": "8ebf6c2d020bf8c0f9bc1f56eecf8ca2436359e4a9d088ae6070759d63ffc485"
+      },
+      "lineage.jsonl": {
+        "bytes": 18084,
+        "sha256": "7f0bbee26468e7fae35dc970e0ed2403abe2c4b157a7fd2943007969eae52e7e"
+      },
+      "quarantine.jsonl": {
+        "bytes": 522,
+        "sha256": "a4bec38bebf983e6a1a8cbe78d004734b7f5432cef84f73c548153438f1ed8d3"
+      },
+      "raw/records.jsonl": {
+        "bytes": 3097,
+        "sha256": "6f5c21ce6e70abb56712fa0e5b6058cc678579564d9a36e22d6898af0d79071e"
+      },
+      "reference/gold.json": {
+        "bytes": 943,
+        "sha256": "203a8bb1ed213d2a61520717adc04fdfab654dc5b6eabd3a4de63337b9c76176"
+      },
+      "release.jsonl": {
+        "bytes": 8558,
+        "sha256": "72acf068495c9abab7a3638feb19c7d2e8fc774bd637011c28956ae37b309580"
+      },
+      "test.jsonl": {
+        "bytes": 2493,
+        "sha256": "ffa7dcc902b346a4fd99d8429bd43b3f79e2fce09258abbb6e3c3642125a19ce"
+      },
+      "train.jsonl": {
+        "bytes": 4295,
+        "sha256": "42fd49bf9c052e7d543eb6be6b8571715209f7338c2c17f6e61185e369c801c7"
+      }
+    },
+    "recipe": {
+      "dedup": "exact equality of normalized text; SHA-256 canonical IDs; all raw lineage retained",
+      "gold_policy": "evaluation only; unknown IDs fail; missing allowed; conflicting duplicate annotations excluded",
+      "grouping": "connected components of equal canonical_id OR equal source_id OR equal family_id; global IDs",
+      "labels": [
+        "access",
+        "billing",
+        "technical"
+      ],
+      "normalization": "Unicode NFKC, casefold, NFKC again, collapse all Unicode whitespace, strip; retain punctuation",
+      "record_id_policy": "all strictly decoded objects with a valid unambiguous id reserve that identity; quarantine every accepted occurrence of a reused id even if another occurrence is invalid; undecodable lines and duplicate-key objects have no safely identifiable id",
+      "rules": [
+        {
+          "label": "billing",
+          "name": "billing_terms",
+          "regex": "\\b(invoice|refund|charge|payment)\\b"
+        },
+        {
+          "label": "access",
+          "name": "access_terms",
+          "regex": "\\b(password|login|locked)\\b"
+        },
+        {
+          "label": "technical",
+          "name": "failure_terms",
+          "regex": "\\b(crash|crashes|error|frozen)\\b"
+        }
+      ],
+      "seed": "first-release-v1",
+      "serialization": "UTF-8, sorted object keys, LF endings; no clock or absolute path fields",
+      "splitting": "sort groups by SHA-256(seed + newline + group_id); floor(60%)/floor(20%)/remainder; train and dev each at least one group; at least three groups required; no stratification",
+      "unicode_database_version": "15.0.0",
+      "version": 3,
+      "weak_labeling": "fixed regex votes; unanimous non-abstaining class wins; conflicts and no votes abstain"
+    },
+    "recipe_sha256": "963fbecf60d1214b37fcf82741c1ea763707592d7f0b498dd1acd5e6a9432446"
+  },
+  "educational_export_manifest": {
+    "accepted": 14,
+    "adapter": "educational-text-routing-1",
+    "compatibility": "Only contract.py load_batch; no Training Your Own Models compatibility",
+    "consumer": "educational-text-routing-1",
+    "excluded": 10,
+    "outputs": {
+      "exclusions.json": {
+        "bytes": 1148,
+        "sha256": "1c2892c2cc8b6ad68739a0ce8541c30dd16e96971d8de00e8722a43d86e27380"
+      },
+      "rows.jsonl": {
+        "bytes": 3404,
+        "sha256": "376e51d8a9aaf6b0732e3cec931d3539dda616204e517bf803d5e751782a8dfd"
+      },
+      "schema.json": {
+        "bytes": 428,
+        "sha256": "1a4d14c82b256093729b1d4f3fdfb292e45ad6dc40514fb37a0b11dd3b70ec42"
+      }
+    },
+    "source_manifest_sha256": "9e9f300ea85d1df4b1a9debcc42175cae43413f290779299977e8fad5ad4d726",
+    "source_release_sha256": "72acf068495c9abab7a3638feb19c7d2e8fc774bd637011c28956ae37b309580"
+  },
+  "recovery_receipt": {
+    "evidence_label": "executed authored CPU fixture",
+    "independent_backup": {
+      "consumer": "toy-refund-consumer-1",
+      "hashes_verified": 3,
+      "parser": "all-text-v1",
+      "refund_requested": false,
+      "release": "R1",
+      "text": "Please do not refund this payment."
+    },
+    "limits": "Toy sibling-directory backup only; no model, remote durability, credentials or production recovery guarantee",
+    "restart": {
+      "job": "toy-build-R2",
+      "resumes": 1,
+      "status": "complete"
+    },
+    "restart_did_not_repair": "nested-negation regression failed",
+    "restore": {
+      "consumer": "toy-refund-consumer-1",
+      "hashes_verified": 3,
+      "parser": "all-text-v1",
+      "refund_requested": false,
+      "release": "R1",
+      "text": "Please do not refund this payment."
+    },
+    "restored_hashes_match": true,
+    "rollback": {
+      "consumer": "toy-refund-consumer-1",
+      "hashes_verified": 3,
+      "parser": "all-text-v1",
+      "refund_requested": false,
+      "release": "R1",
+      "text": "Please do not refund this payment."
+    },
+    "unit": "one authored nested-negation request",
+    "working_tree_removed_before_restore": true
+  },
+  "limits": [
+    "Authored teaching data, not real customer observations",
+    "No model training, GPU test, inference accuracy or independently reviewed reference claim",
+    "Educational-text-routing-1 only; no numeric companion compatibility",
+    "Toy sibling-directory backup survives working-tree loss, not whole-disk loss or remote durability failure",
+    "Changed code/input bytes require relevant checks to rerun before reusing this evidence"
+  ]
+}

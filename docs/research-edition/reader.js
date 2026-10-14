@@ -1,0 +1,2 @@
+const input=document.getElementById('toc-search');
+input.addEventListener('input',()=>{const query=input.value.trim().toLowerCase();const links=[...document.querySelectorAll('.book-toc nav a')];let visible=0;for(const a of links){const show=a.textContent.toLowerCase().includes(query);a.hidden=!show;if(show)visible++;}document.getElementById('toc-result').textContent=query?`${visible} matching sections`:'';});

@@ -6,7 +6,7 @@ import re
 BASE='https://mrscripty.github.io/dataset-production/'
 IMAGE=BASE+'assets/dataset-production-social-1280x640.jpg'
 TITLE='Dataset Production by Puma'
-DESCRIPTION='An 80-page fieldbook on building reliable training data, with interactive examples and proposed Tuldok workspaces.'
+DESCRIPTION='A principles-first fieldbook by Puma: 15 core chapters, six optional tracks, and hardware-free exercises for reliable dataset production.'
 ALT='The full Dataset Production book cover by Puma, centered on a dark plum landscape background, with its title and author visible.'
 START='<!-- book-sharing-metadata:start -->'
 END='<!-- book-sharing-metadata:end -->'

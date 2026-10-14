@@ -1,0 +1,81 @@
+{
+  "title": "Dataset Production",
+  "author": "Puma",
+  "edition": "2026-10-13",
+  "label": "Principles-first edition",
+  "source_base_commit": "ac62387a3a9760e3f1e9f8b8290552cb2dc13471",
+  "chapters": 15,
+  "tracks": 6,
+  "appendices": 4,
+  "parts": [
+    {
+      "title": "A first useful release",
+      "first": 1,
+      "last": 4
+    },
+    {
+      "title": "Evidence you can trust",
+      "first": 5,
+      "last": 8
+    },
+    {
+      "title": "Controlled improvement",
+      "first": 9,
+      "last": 12
+    },
+    {
+      "title": "A release others can use",
+      "first": 13,
+      "last": 15
+    }
+  ],
+  "chapter_ids": [
+    "inspect-release",
+    "question-claim",
+    "data-contract",
+    "sources-origin",
+    "extraction-evidence",
+    "independence-evaluation",
+    "labels-measurements",
+    "audit-baseline",
+    "useful-examples",
+    "valid-transformations",
+    "uncertain-supervision",
+    "generate-verify",
+    "evaluate-diagnose",
+    "freeze-consumer",
+    "operate-recover-cost"
+  ],
+  "pdf_pages": 152,
+  "manuscript_sha256": "51164631806008ab2cf9989f902f4b93d12c3d270c4fccbdcf2c5e2af6f4eff4",
+  "modules": [
+    "editions/principles/core/01-inspect-release.md",
+    "editions/principles/core/02-define-claim.md",
+    "editions/principles/core/03-data-contract.md",
+    "editions/principles/core/04-sources-origin.md",
+    "editions/principles/core/05-extract-preserve-evidence.md",
+    "editions/principles/core/06-protect-independence.md",
+    "editions/principles/core/07-labels-as-measurements.md",
+    "editions/principles/core/08-audit-baseline.md",
+    "editions/principles/core/09-collect-or-select.md",
+    "editions/principles/core/10-transform-examples.md",
+    "editions/principles/core/11-scale-supervision.md",
+    "editions/principles/core/12-generate-and-verify.md",
+    "editions/principles/core/13-evaluate-and-diagnose.md",
+    "editions/principles/core/14-freeze-and-test.md",
+    "editions/principles/core/15-operate-recover-cost.md",
+    "editions/principles/tracks/01-text-retrieval.md",
+    "editions/principles/tracks/02-tabular-time-series.md",
+    "editions/principles/tracks/03-vision-video.md",
+    "editions/principles/tracks/04-audio.md",
+    "editions/principles/tracks/05-reasoning-trajectories.md",
+    "editions/principles/tracks/06-physical-fields-simulation.md",
+    "editions/principles/tracks/advanced-methods.md",
+    "editions/principles/tracks/advanced-track-assessment.md",
+    "editions/principles/cases/01-rheon.md",
+    "editions/principles/cases/02-tuldok.md",
+    "editions/principles/cases/03-published-production-systems.md",
+    "editions/principles/cases/90-versioned-product-appendix.md",
+    "editions/principles/cases/evidence-ledger.md"
+  ]
+}
