@@ -45,4 +45,3 @@ Authored illustrations, executed CPU fixtures, published results and source-insp
 Training Your Own Models remains a separate companion for fitting implementations, architectures and neural training. This book ends at data and consumer contracts. A hash establishes byte identity, not correctness, authenticity, permission or compatibility.
 
 No distribution license has been selected for this repository or book. Public visibility does not automatically confer reuse rights. Supplied fictional fixtures contain no third-party personal data; referenced projects and datasets retain their own licenses and terms.
-

@@ -27,9 +27,8 @@ The Rheon and Tuldok cases are pinned evidence studies. The browser Tuldok inter
 
 ## Contribute or reproduce the edition
 
-Readers need only a browser or PDF reader. [Contributor instructions](CONTRIBUTING.md) cover source layout, book/PDF builds, checks and publication. The publishable site is checked in under `docs/`.
+Readers need only a browser or PDF reader. [Contributor instructions](https://github.com/MrScripty/dataset-production/blob/main/CONTRIBUTING.md) cover source layout, book/PDF builds, checks and publication. The [edition source guide](editions/principles/README.md) is included in source downloads for offline build instructions. The publishable site is checked in under `docs/`.
 
 The [previous research edition](https://mrscripty.github.io/dataset-production/research-edition/) remains available with its original evidence boundary.
 
 No distribution license has been selected. Public visibility alone does not grant reuse rights; referenced projects and datasets retain their own terms.
-
